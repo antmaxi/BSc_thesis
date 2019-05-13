@@ -1,0 +1,37 @@
+# from project root
+
+# compile Get Cleft
+gcc ./Get_Cleft-master/Get_Cleft.c -o Get_Cleft -O3 -lm
+
+# compile mif and isomif for linux_x86_64, needs path to gsl
+g++ ./IsoMif-master/mif.cpp -o IsoMif-master/mif_linux_x86_64_compiled -O3 -lm
+g++ ./IsoMif-master/isomif.cpp -o .IsoMif-master/isomif_linux_x86_64_compiled -O3 -lm -lgsl 
+-lgslcblas -L-lgslcblas -L/media/anton/b8150e49-6ff0-467b-ad66-40347e8bb188/anton/BACHELOR/gsl/lib -I/media/anton/b8150e49-6ff0-467b-ad66-40347e8bb188/anton/BACHELOR/gsl/include
+
+#vmake clefts
+#./Get_Cleft-master/Get_Cleft -p ./hive/pdb/1E8X.pdb -o ./hive/clefts/1E8X -s -t 5 
+
+./Get_Cleft-master/Get_Cleft -p ./hive/pdb/1E8X.pdb -o ./hive/clefts/1E8X -s -a ATP3000A-
+./Get_Cleft-master/Get_Cleft -p ./hive/pdb/1RDQ.pdb -o ./hive/clefts/1RDQ -s -a ATP600EB
+
+
+# add hydrogens
+./IsoMif-master/reduce.3.23.130521 -p ./hive/pdb/1E8X.pdb > ./hive/pdb/1E8Xh.pdb
+./IsoMif-master/reduce.3.23.130521 -p ./hive/pdb/1RDQ.pdb > ./hive/pdb/1RDQh.pdb
+
+# calculate MIF
+./IsoMif-master/mif_linux_x86_64_compiled -p ./hive/pdb/1E8Xh.pdb -g ./hive/clefts/1E8X_ATP3000A-_sph_1.pdb -o ./hive/mifs/ -l ATP3000A -r 3 -t 1E8X
+./IsoMif-master/mif_linux_x86_64_compiled -p ./hive/pdb/1RDQh.pdb -g ./hive/clefts/1RDQ_ATP600EB_sph_2.pdb -o ./hive/mifs/ -l ATP600E -r 3 -t 1RDQ
+
+./IsoMif-master/mif_linux_x86_64_compiled -p ./hive/pdb/1E8Xh.pdb -g ./hive/clefts/1E8X_ATP3000A-_sph_1.pdb -o ./hive/mifs/ z 1
+./IsoMif-master/mif_linux_x86_64_compiled -p ./hive/pdb/1RDQh.pdb -g ./hive/clefts/1RDQ_ATP600EB_sph_2.pdb -o ./hive/mifs/ z 1
+
+perl ./mifView.pl -m ./hive/mifs/1E8Xh.mif -o ./hive/mifView/ perl ./mifView.pl -m ./hive/mifs/1RDQ.mif -o ./hive/mifView/
+#perl ./mifView.pl -m ./hive/mifs/1E8X.mif -o ./hive/mifView/ perl ./mifView.pl -m ./hive/mifs/1RDQ.mif -o ./hive/mifView/
+
+
+
+./IsoMif-master/isomif_linux_x86_64_compiled -p1 ./hive/mifs/1E8Xh.mif -p2 ./hive/mifs/1RDQh.mif -o ./hive/match/ -c 1 -d 2.0
+perl ./IsoMif-master/isoMifView.pl -m ./hive/match/1E8Xh_match_1RDQh.isomif -o ./hive/matchView/ -g 1
+
+
