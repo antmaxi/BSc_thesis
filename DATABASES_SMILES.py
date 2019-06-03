@@ -53,8 +53,8 @@ def get_pdbs_from_uniprot(uniprot, path_to_save=None):
     return ''.join(r).split()
 
 
-def get_all_pubchem_ids(ligands_ids, ligands_resources):
-    """ 
+def get_all_smiles_from_pubchem_ids(ligands_ids, ligands_resources):
+    """ Get all SMILEs of compounds in the ligands_ids list
     https://pubchempy.readthedocs.io/en/latest/guide/install.html
     """
     pubchem_ids = []
