@@ -130,6 +130,26 @@ def get_pdbs_from_smiles(smiles, step_or_exact=-0.05, name=None, root_path=ROOT_
                 
     return sim, pdbs_from_smiles
 
+
+def get_smiles_from_name(name, ligands_ids_by_names, ligands_resources_by_names):
+    """Return SMILES using usual name of drug in Drugbank"""
+    ligands_ids_by_names = dict(zip(ligands_names, ligands_ids))
+    ligands_resources_by_names = dict(zip(ligands_names, ligands_resources))
+    ind = -1
+    try:
+        # Find index of PubChem id
+        ind = ligands_resources_by_names[name].index('PubChem Substance')
+        #Find id
+        pubchem = ligands_ids_by_names['Cetuximab'][ind]
+        # Get smiles from PubCHEM
+        c = pubchempy.Compound.from_cid(pubchem)
+        smiles = c.isomeric_smiles
+        return smiles
+    except:
+        print(f'{name} doesn\'t have pubchem id')
+        return -1
+
+
 #Examples:
 #get_pdbs_from_smiles('CCOC1=CC=C(C=C1)NS(=O)(=O)C2=CC(=NN2)C(=O)NC3=CC(=CC=C3)SC', \
 #                     step_or_exact=0.45, name='46507011')
