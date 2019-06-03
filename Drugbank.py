@@ -43,9 +43,13 @@ def make_dir(dirList):
 def dump_info_db(root):
     """Save all collected from Drugbank data to root/Drugbank_exracted"""
     names = ['ligands_names', 'ligands_unii', 'ligands_ids', 'ligands_drugbank_ids', 'ligands_resources',
-             'targets_ids', 'targets_resources']
+             'ligands_ids_by_names', 'ligands_resources_by_names',
+             'targets_ids', 'targets_resources',
+            ]
     name_full = str(Path(root) / 'Drugbank_extracted')
     make_dir([name_full])
+    ligands_ids_by_names = dict(zip(ligands_names, ligands_ids))
+    ligands_resources_by_names = dict(zip(ligands_names, ligands_resources))
     for name in names:
         with open(str(Path(name_full) / (name + ".txt")), 'w') as f:
             exec('global ' + name + '\n' + 'json.dump(' + name + ', f, ensure_ascii=False)')
@@ -54,7 +58,9 @@ def dump_info_db(root):
 def load_info_db(root):
     """Load all collected from Drugbank data from root/Drugbank_exracted"""
     names = ['ligands_names', 'ligands_unii', 'ligands_ids', 'ligands_drugbank_ids', 'ligands_resources',
-             'targets_ids', 'targets_resources']
+             'ligands_ids_by_names', 'ligands_resources_by_names',
+             'targets_ids', 'targets_resources'
+            ]
     name_full = str(Path(root) / 'Drugbank_extracted')
 
     for name in names:
@@ -83,12 +89,17 @@ def process_drugbank(root, name='full database.xml'):
     # Here go lists with collected information about approved by FDA ligands in Drugbank
     # !!! Maybe use some OOP instead of list of lists
     global ligands_unii, ligands_drugbank_ids, ligands_names, ligands_ids, ligands_resources
+    global ligands_ids_by_names, ligands_resources_by_names
     global targets_ids, targets_resources
+    
     ligands_unii = []  # List of ligands' UNII ids
     ligands_drugbank_ids = []  # List of lists of Drugbank ids (one ligand could have several)
     ligands_names = []  # List of usual names
     ligands_ids = []  # List of lists of ids in different DBs
     ligands_resources = []  # List of lists of resources in different DBs
+    ligands_ids_by_names = []  # Dictionary name:list of ids
+    ligands_resources_by_names = []  # # Dictionary name:list of resources
+    
     targets_ids = []  # List of lists of lists of ids in different DBs
     targets_resources = []  # List of lists of lists of resources in different DBs
     unii = ""
@@ -170,7 +181,7 @@ def process_drugbank(root, name='full database.xml'):
             root_tree.clear()
 
         # If approved => add information        
-        if unii != "" and fda_approved:
+        if unii != "" and fda_approved and l_ids:
             fda_approved = False
             ligands_names.append(name)
             ligands_unii.append(unii)
