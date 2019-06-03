@@ -1,14 +1,17 @@
+
 """Some functions for jumping between ids:
 Uniprot => PDBs
 PubCHEM => SMILES
 SMILES => PDBs
+Name of ligand => SMILES
 """
 
 import os
 import requests
+import subprocess
 from pathlib import Path
 import xml.etree.ElementTree as ET
-import pubchempy as pcp
+import pubchempy
 
 global ROOT_PATH
 ROOT_PATH = '/media/anton/b8150e49-6ff0-467b-ad66-40347e8bb188/anton/BACHELOR'
@@ -53,8 +56,8 @@ def get_pdbs_from_uniprot(uniprot, path_to_save=None):
     return ''.join(r).split()
 
 
-def get_all_pubchem_ids(ligands_ids, ligands_resources):
-    """ 
+def get_all_smiles_from_pubchem_ids(ligands_ids, ligands_resources):
+    """ Get all SMILEs of compounds in the ligands_ids list
     https://pubchempy.readthedocs.io/en/latest/guide/install.html
     """
     pubchem_ids = []
@@ -72,7 +75,7 @@ def get_all_pubchem_ids(ligands_ids, ligands_resources):
                         # Get correspondent PubCHEM id 
                         pubchem = ligands_ids[ind1][ind2]
                         # Get smiles from this id
-                        c = pcp.Compound.from_cid(pubchem)
+                        c = pubchempy.Compound.from_cid(pubchem)
                         pubchem_smiles.append(c.isomeric_smiles)
                         # Add to list places of successfull ligands in whole list
                         pubchem_numbers.append(ind1)  
@@ -84,7 +87,7 @@ def get_all_pubchem_ids(ligands_ids, ligands_resources):
                     break
     return pubchem_smiles, pubchem_numbers, pubchem_ids              
                     
-def get_pdbs_from_smiles(smiles, step_or_exact=-0.05, name=None, root_path=ROOT_PATH):
+def get_pdbs_from_smiles(smiles, step_or_exact=-0.05, name='list_of_pdbs', root_path=ROOT_PATH):
     """Get list of pdbs containing similiar SMILES.
     if step_or_exact < 0 => searching for pdbs decreasing level of similiarity from 1.0 by |step_or_exact|
     if step_or_exact > 0 => searching with this similiarity level (from 0.0 to 1.0)
@@ -93,7 +96,7 @@ def get_pdbs_from_smiles(smiles, step_or_exact=-0.05, name=None, root_path=ROOT_
     """
     path = Path(root_path) / 'SMILES'
     make_dir([str(path)])
-
+    print(str(path))
     # Trying to find appropriate similarity level to find at least one structure just by descending 
     # (mb, implement binary search?)
     if step_or_exact < 0:
@@ -106,13 +109,14 @@ def get_pdbs_from_smiles(smiles, step_or_exact=-0.05, name=None, root_path=ROOT_
             pdbs_from_smiles = []
             sim -= step
             r = requests.get(url, allow_redirects=True)
+            print("Pdbs list downloaded")
             a = open(os.path.join(path, str(name) + '.xml'), 'wb').write(r.content)
-
             tree = ET.parse(os.path.join(path, str(name) + '.xml'))
             root = tree.getroot()
             for child in root:
                 for child1 in child:
                     pdbs_from_smiles.append(child1.attrib['structureId'])
+            subprocess.check_output(['rm', os.path.join(path, str(name) + '.xml')]) 
     # Exact search
     else:
         sim = step_or_exact
@@ -127,12 +131,16 @@ def get_pdbs_from_smiles(smiles, step_or_exact=-0.05, name=None, root_path=ROOT_
         for child in root:
             for child1 in child:
                 pdbs_from_smiles.append(child1.attrib['structureId'])
+        subprocess.check_output(['rm', os.path.join(path, str(name) + '.xml')]) 
                 
     return sim, pdbs_from_smiles
 
 
 def get_smiles_from_name(name, ligands_ids_by_names, ligands_resources_by_names):
-    """Return SMILES using usual name of drug in Drugbank"""
+    """Return SMILES using usual name of drug in Drugbank
+    ligands_ids_by_names -- Dictionary name:list of ids, made by Drugbank processing and dump
+    ligands_resources_by_names -- Dictionary name:list of resources, made by Drugbank processing and dump 
+    """
     ligands_ids_by_names = dict(zip(ligands_names, ligands_ids))
     ligands_resources_by_names = dict(zip(ligands_names, ligands_resources))
     ind = -1
@@ -148,7 +156,17 @@ def get_smiles_from_name(name, ligands_ids_by_names, ligands_resources_by_names)
     except:
         print(f'{name} doesn\'t have pubchem id')
         return -1
+    
 
+def get_targets_uniprots_by_ligand_name(name_lig, ligands_names_and_their_targets_resources,
+                                        ligands_names_and_their_targets_ids):
+    """Get list of target's uniprots by name of ligand"""
+    targets = []
+    for target_resources in ligands_names_and_their_targets_resources[name_lig]:
+        for index, target_resource in enumerate(target_resources):
+            if target_resource == 'UniProtKB':
+                targets.append(ligands_names_and_their_targets_ids[name_lig][index])
+    return targets
 
 #Examples:
 #get_pdbs_from_smiles('CCOC1=CC=C(C=C1)NS(=O)(=O)C2=CC(=NN2)C(=O)NC3=CC(=CC=C3)SC', \

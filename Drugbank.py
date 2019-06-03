@@ -50,6 +50,8 @@ def dump_info_db(root):
     make_dir([name_full])
     ligands_ids_by_names = dict(zip(ligands_names, ligands_ids))
     ligands_resources_by_names = dict(zip(ligands_names, ligands_resources))
+    ligands_names_and_their_targets_ids = dict(zip(ligands_names, targets_ids))
+    ligands_names_and_their_targets_resources = dict(zip(ligands_names, targets_resources))
     for name in names:
         with open(str(Path(name_full) / (name + ".txt")), 'w') as f:
             exec('global ' + name + '\n' + 'json.dump(' + name + ', f, ensure_ascii=False)')
@@ -90,6 +92,7 @@ def process_drugbank(root, name='full database.xml'):
     # !!! Maybe use some OOP instead of list of lists
     global ligands_unii, ligands_drugbank_ids, ligands_names, ligands_ids, ligands_resources
     global ligands_ids_by_names, ligands_resources_by_names
+    global ligands_names_and_their_targets_ids, ligands_names_and_their_targets_resources
     global targets_ids, targets_resources
     
     ligands_unii = []  # List of ligands' UNII ids
@@ -98,7 +101,7 @@ def process_drugbank(root, name='full database.xml'):
     ligands_ids = []  # List of lists of ids in different DBs
     ligands_resources = []  # List of lists of resources in different DBs
     ligands_ids_by_names = []  # Dictionary name:list of ids
-    ligands_resources_by_names = []  # # Dictionary name:list of resources
+    ligands_resources_by_names = []  # Dictionary name:list of resources
     
     targets_ids = []  # List of lists of lists of ids in different DBs
     targets_resources = []  # List of lists of lists of resources in different DBs
@@ -158,7 +161,8 @@ def process_drugbank(root, name='full database.xml'):
                             if db_tag(it, "identifier"):
                                 l_ids.append(it.text)
 
-                # Get identifiers of targets and their databases 
+                # Get identifiers of targets and their databases
+                # ADD: extract names of targets?
                 if db_tag(item, "targets"):
                     for it1 in list(item):
                         for it2 in list(it1):
@@ -173,7 +177,7 @@ def process_drugbank(root, name='full database.xml'):
                                                     t_id.append(it5.text)
                                         # Gather all ids and resorces of one target
                                         t_ids.append(t_id)
-                                        t_ids = []
+                                        t_id = []
                                         t_resources.append(t_resource)
                                         t_resource = []
 
