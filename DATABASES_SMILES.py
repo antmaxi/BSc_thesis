@@ -53,7 +53,7 @@ def get_pdbs_from_uniprot(uniprot, path_to_save=None):
     return ''.join(r).split()
 
 
-def get_all_pubchem_ids(ligands_ids, ligands_resources)
+def get_all_pubchem_ids(ligands_ids, ligands_resources):
     """ 
     https://pubchempy.readthedocs.io/en/latest/guide/install.html
     """
