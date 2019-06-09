@@ -8,6 +8,7 @@ from pathlib import Path
 import subprocess
 import zipfile
 
+import DATABASES_SMILES as db
 
 # Carefully use it: the whole database is 130 MB packed, 1.3 GB unpacked
 def update_drugbank(DRUGBANK_PATH, release='5-1-3'):
@@ -42,25 +43,38 @@ def make_dir(dirList):
 
 def dump_info_db(root):
     """Save all collected from Drugbank data to root/Drugbank_exracted"""
-    names = ['ligands_names', 'ligands_unii', 'ligands_ids', 'ligands_drugbank_ids', 'ligands_resources',
+    names = ['ligands_unii', 'ligands_drugbank_ids', 'ligands_names', 'ligands_ids', 'ligands_resources',
              'ligands_ids_by_names', 'ligands_resources_by_names',
-             'targets_ids', 'targets_resources',
+             'ligands_names_and_their_targets_ids', 'ligands_names_and_their_targets_resources',
+             'targets_ids', 'targets_resources'
             ]
     name_full = str(Path(root) / 'Drugbank_extracted')
     make_dir([name_full])
+    
+    for name in names:
+        exec('global ' + name)
     ligands_ids_by_names = dict(zip(ligands_names, ligands_ids))
     ligands_resources_by_names = dict(zip(ligands_names, ligands_resources))
     ligands_names_and_their_targets_ids = dict(zip(ligands_names, targets_ids))
     ligands_names_and_their_targets_resources = dict(zip(ligands_names, targets_resources))
     for name in names:
         with open(str(Path(name_full) / (name + ".txt")), 'w') as f:
-            exec('global ' + name + '\n' + 'json.dump(' + name + ', f, ensure_ascii=False)')
+            exec('json.dump(' + name + ', f, ensure_ascii=False)')
 
 
+def init_vars_of_drugbank():
+    """Initialise global variables used when processing drugbank data"""
+    global ligands_unii, ligands_drugbank_ids, ligands_names, ligands_ids, ligands_resources
+    global ligands_ids_by_names, ligands_resources_by_names
+    global ligands_names_and_their_targets_ids, ligands_names_and_their_targets_resources
+    global targets_ids, targets_resources
+    
+    
 def load_info_db(root):
     """Load all collected from Drugbank data from root/Drugbank_exracted"""
-    names = ['ligands_names', 'ligands_unii', 'ligands_ids', 'ligands_drugbank_ids', 'ligands_resources',
+    names = ['ligands_unii', 'ligands_drugbank_ids', 'ligands_names', 'ligands_ids', 'ligands_resources',
              'ligands_ids_by_names', 'ligands_resources_by_names',
+             'ligands_names_and_their_targets_ids', 'ligands_names_and_their_targets_resources',
              'targets_ids', 'targets_resources'
             ]
     name_full = str(Path(root) / 'Drugbank_extracted')
@@ -90,10 +104,7 @@ def process_drugbank(root, name='full database.xml'):
 
     # Here go lists with collected information about approved by FDA ligands in Drugbank
     # !!! Maybe use some OOP instead of list of lists
-    global ligands_unii, ligands_drugbank_ids, ligands_names, ligands_ids, ligands_resources
-    global ligands_ids_by_names, ligands_resources_by_names
-    global ligands_names_and_their_targets_ids, ligands_names_and_their_targets_resources
-    global targets_ids, targets_resources
+    init_vars_of_drugbank()
     
     ligands_unii = []  # List of ligands' UNII ids
     ligands_drugbank_ids = []  # List of lists of Drugbank ids (one ligand could have several)
@@ -202,8 +213,17 @@ def process_drugbank(root, name='full database.xml'):
 
 # Directory where all data placed
 root = '/media/anton/b8150e49-6ff0-467b-ad66-40347e8bb188/anton/BACHELOR'
-ROOT_PATH = Path(root)
+ROOT_PATH = '/media/anton/b8150e49-6ff0-467b-ad66-40347e8bb188/anton/BACHELOR'
 DRUGBANK_PATH = Path(root) / 'Drugbank'
 
-process_drugbank(ROOT_PATH)
+# If needed to update:
+#process_drugbank(ROOT_PATH)
 #update_drugbank(DRUGBANK_PATH)
+load_info_db(root)
+
+
+
+name_lig = 'Methazolamide'
+uniprot = 'P00918'
+#print(get_common_pdbs_from_ligand_name_and_target_uniprot(name_lig, uniprot, 0.4))
+print(get_common_pdbs_with_all_targets_of_ligand(name_lig, 0.4))

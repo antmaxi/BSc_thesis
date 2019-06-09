@@ -38,21 +38,23 @@ def download_url(url, path=None, name=None):
 
 
 def get_pdbs_from_uniprot(uniprot, path_to_save=None):
-    """Get list of .pdb which include this uniprot
+    """Return list of .pdb which include this uniprot
     uniprot -- id in UNIPROT
     path_to_save -- directory-string where to save with name uniprot_pdbs.txt if needed
     """
     url = 'https://www.uniprot.org/uploadlists/?from=ID&to=PDB_ID&format=list&query=' \
         + uniprot
     # If only list is needed
-    if path_to_save is not None:
+    if path_to_save is None:
         r = download_url(url)
     # If need to save the list
     else:
         path_list_of_pdbs = str(Path(path_to_save) / uniprot)
         name = uniprot + '_pdbs.txt'
-        r = download_url(url, path_list_of_pdbs, name)
-        open(os.path.join(path_list_of_pdbs, name), 'wb').write(r.encode('utf-8'))
+        full_name = os.path.join(path_list_of_pdbs, name)
+        if not full_name.is_file():
+            r = download_url(url, path_list_of_pdbs, name)
+            open(full_name, 'wb').write(r.encode('utf-8'))
     return ''.join(r).split()
 
 
@@ -89,51 +91,68 @@ def get_all_smiles_from_pubchem_ids(ligands_ids, ligands_resources):
                     
 def get_pdbs_from_smiles(smiles, step_or_exact=-0.05, name='list_of_pdbs', root_path=ROOT_PATH):
     """Get list of pdbs containing similiar SMILES.
-    if step_or_exact < 0 => searching for pdbs decreasing level of similiarity from 1.0 by |step_or_exact|
+    if step_or_exact < 0 => searching for pdbs increasing level of dissimiliarity from 0.0 by |step_or_exact|
     if step_or_exact > 0 => searching with this similiarity level (from 0.0 to 1.0)
     if name != None then save list of pdbs in ROOT_PATH/SMILES in name.xml
     Output -- level of similiarity, list of pdb ids
     """
     path = Path(root_path) / 'SMILES'
     make_dir([str(path)])
-    print(str(path))
     # Trying to find appropriate similarity level to find at least one structure just by descending 
     # (mb, implement binary search?)
     if step_or_exact < 0:
+        print(step_or_exact)
         step = step_or_exact
-        sim = 1.0 + step
+        sim = 0.0 - step
         pdbs_from_smiles = []
         while not pdbs_from_smiles:
+            sim += step
+            print('sim=', sim)
             url = 'http://www.rcsb.org/pdb/rest/smilesQuery?smiles=' + smiles \
             + '&search_type=similarity&similarity=' + str(sim)
-            pdbs_from_smiles = []
-            sim -= step
+            pdbs_from_smiles = [] 
             r = requests.get(url, allow_redirects=True)
-            print("Pdbs list downloaded")
             a = open(os.path.join(path, str(name) + '.xml'), 'wb').write(r.content)
+            # Parsing the result of request
             tree = ET.parse(os.path.join(path, str(name) + '.xml'))
             root = tree.getroot()
             for child in root:
                 for child1 in child:
                     pdbs_from_smiles.append(child1.attrib['structureId'])
-            subprocess.check_output(['rm', os.path.join(path, str(name) + '.xml')]) 
+            #subprocess.check_output(['rm', os.path.join(path, str(name) + '.xml')]) 
     # Exact search
     else:
+        print(step_or_exact)
         sim = step_or_exact
         url = 'http://www.rcsb.org/pdb/rest/smilesQuery?smiles=' + smiles \
             + '&search_type=similarity&similarity=' + str(sim)
         pdbs_from_smiles = []
         r = requests.get(url, allow_redirects=True)
         a = open(os.path.join(path, str(name) + '.xml'), 'wb').write(r.content)
-
+        # Parsing the result of request
         tree = ET.parse(os.path.join(path, str(name) + '.xml'))
         root = tree.getroot()
         for child in root:
             for child1 in child:
                 pdbs_from_smiles.append(child1.attrib['structureId'])
-        subprocess.check_output(['rm', os.path.join(path, str(name) + '.xml')]) 
+        #subprocess.check_output(['rm', os.path.join(path, str(name) + '.xml')]) 
                 
     return sim, pdbs_from_smiles
+
+
+def get_targets_uniprots_from_ligand_name(name_lig, ligands_names_and_their_targets_ids, ligands_names_and_their_targets_resources):
+    """Get list of target's uniprots by name of ligand
+    INPUT - name of ligand,
+    dictionary name:list of ids of targets of this ligand,
+    dictionary name:list of resources of targets of this ligand,
+    """
+    targets = []
+    for index_target, target_resources in enumerate(ligands_names_and_their_targets_resources[name_lig]):
+        for index_resource, target_resource in enumerate(target_resources):
+            if target_resource == 'UniProtKB':
+                targets.append(ligands_names_and_their_targets_ids[name_lig][index_target][index_resource])
+    return targets
+
 
 
 def get_smiles_from_name(name, ligands_ids_by_names, ligands_resources_by_names):
@@ -141,32 +160,80 @@ def get_smiles_from_name(name, ligands_ids_by_names, ligands_resources_by_names)
     ligands_ids_by_names -- Dictionary name:list of ids, made by Drugbank processing and dump
     ligands_resources_by_names -- Dictionary name:list of resources, made by Drugbank processing and dump 
     """
-    ligands_ids_by_names = dict(zip(ligands_names, ligands_ids))
-    ligands_resources_by_names = dict(zip(ligands_names, ligands_resources))
     ind = -1
     try:
         # Find index of PubChem id
         ind = ligands_resources_by_names[name].index('PubChem Substance')
         #Find id
-        pubchem = ligands_ids_by_names['Cetuximab'][ind]
+        pubchem = ligands_ids_by_names[name][ind]
         # Get smiles from PubCHEM
         c = pubchempy.Compound.from_cid(pubchem)
         smiles = c.isomeric_smiles
         return smiles
     except:
         print(f'{name} doesn\'t have pubchem id')
-        return -1
+        return None
     
 
-def get_targets_uniprots_by_ligand_name(name_lig, ligands_names_and_their_targets_resources,
-                                        ligands_names_and_their_targets_ids):
-    """Get list of target's uniprots by name of ligand"""
-    targets = []
-    for target_resources in ligands_names_and_their_targets_resources[name_lig]:
-        for index, target_resource in enumerate(target_resources):
-            if target_resource == 'UniProtKB':
-                targets.append(ligands_names_and_their_targets_ids[name_lig][index])
-    return targets
+def get_common_pdbs_from_ligand_name_and_target_uniprot(name_lig, uniprot, sim):
+    """Get list of pdbs which are in both lists of pdbs 
+    INPUT -- ligand's name name_lig (SMILES searched by sim, see function get_smiles_from_name)
+    uniprot of target
+    OUTPUT -- [(name_lig, uniprot), [list of common pdbs]]
+    """
+    # Initializing needed global variables
+    global ligands_ids_by_names, ligands_resources_by_names
+    global ligands_names_and_their_targets_ids, ligands_names_and_their_targets_resources
+    
+    # Get pdbs lists for ligand and target
+    smiles_of_ligand = db.get_smiles_from_name(name_lig, ligands_ids_by_names, ligands_resources_by_names)
+    pdbs_of_ligand = db.get_pdbs_from_smiles(smiles_of_ligand, sim)
+    pdbs_of_target = db.get_pdbs_from_uniprot(uniprot)
+    
+    # Get list of common pdbs
+    common_pdbs = list(set(pdbs_of_target) & set(pdbs_of_ligand[1]))
+    if common_pdbs:
+        # Produce list of keys [name_lig, uniprot]
+        keys = (name_lig, uniprot)
+        # Append list of pdbs to list of keys
+        result = []
+        result.append(keys)
+        result.append(common_pdbs)
+        return result
+    else:
+        return None
+        
+
+def get_common_pdbs_with_all_targets_of_ligand(name_lig, sim):
+    """Get list of all pdbs connecting ligand and its target
+    INPUT -- ligand's name is name_lig (SMILES searched by sim, see function get_smiles_from_name)
+    OUTPUT -- dictionary {[lig_name, uniprot]:[list of common pdbs]}
+    """
+    # Initializing needed global variables
+    global ligands_ids_by_names, ligands_resources_by_names
+    global ligands_names_and_their_targets_ids, ligands_names_and_their_targets_resources
+    
+    # Get pdbs lists for ligand and target
+    smiles_of_ligand = db.get_smiles_from_name(name_lig, ligands_ids_by_names, ligands_resources_by_names)
+    pdbs_of_ligand = db.get_pdbs_from_smiles(smiles_of_ligand, sim)
+    uniprots_of_targets = db.get_targets_uniprots_from_ligand_name(name_lig, ligands_names_and_their_targets_ids, ligands_names_and_their_targets_resources)
+    
+    # List of lists of all common pdbs
+    all_common_pdbs = []
+    # Keys of the future dict {[lig_name, uniprot]:[list of common pdbs]}
+    keys_ligname_uniprot = []
+    
+    # Get common pdbs and create keys
+    for uniprot in uniprots_of_targets:
+        pdbs_of_target = db.get_pdbs_from_uniprot(uniprot)
+        common_pdbs = list(set(pdbs_of_target) & set(pdbs_of_ligand[1]))
+        all_common_pdbs.append(common_pdbs)
+        keys_ligname_uniprot.append((name_lig, uniprot))
+                  
+    # Final dictionary
+    result = dict(zip(keys_ligname_uniprot, all_common_pdbs))
+    return result
+        
 
 #Examples:
 #get_pdbs_from_smiles('CCOC1=CC=C(C=C1)NS(=O)(=O)C2=CC(=NN2)C(=O)NC3=CC(=CC=C3)SC', \
