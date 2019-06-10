@@ -91,7 +91,7 @@ def get_all_smiles_from_pubchem_ids(ligands_ids, ligands_resources):
                     
 def get_pdbs_from_smiles(smiles, step_or_exact=-0.05, name='list_of_pdbs', root_path=ROOT_PATH):
     """Get list of pdbs containing similiar SMILES.
-    if step_or_exact < 0 => searching for pdbs increasing level of dissimiliarity from 0.0 by |step_or_exact|
+    if step_or_exact < 0 => searching for pdbs decreasing level of similiarity from 1.0 by |step_or_exact|
     if step_or_exact > 0 => searching with this similiarity level (from 0.0 to 1.0)
     if name != None then save list of pdbs in ROOT_PATH/SMILES in name.xml
     Output -- level of similiarity, list of pdb ids
@@ -103,7 +103,7 @@ def get_pdbs_from_smiles(smiles, step_or_exact=-0.05, name='list_of_pdbs', root_
     if step_or_exact < 0:
         print(step_or_exact)
         step = step_or_exact
-        sim = 0.0 - step
+        sim = 1.0 - step
         pdbs_from_smiles = []
         while not pdbs_from_smiles:
             sim += step
@@ -160,35 +160,37 @@ def get_smiles_from_name(name, ligands_ids_by_names, ligands_resources_by_names)
     ligands_ids_by_names -- Dictionary name:list of ids, made by Drugbank processing and dump
     ligands_resources_by_names -- Dictionary name:list of resources, made by Drugbank processing and dump 
     """
-    ind = -1
+    # Find indexes of PubChem as a compound
     try:
-        # Find index of PubChem id
-        ind = ligands_resources_by_names[name].index('PubChem Substance')
-        #Find id
-        pubchem = ligands_ids_by_names[name][ind]
+        ind_compound = ligands_resources_by_names[name].index('PubChem Compound')
+        # Find SMILES
+        pubchem = ligands_ids_by_names[name][ind_compound]
         # Get smiles from PubCHEM
         c = pubchempy.Compound.from_cid(pubchem)
         smiles = c.isomeric_smiles
         return smiles
-    except:
+    except ValueError:
         print(f'{name} doesn\'t have pubchem id')
-        return None
+        
+        
     
 
-def get_common_pdbs_from_ligand_name_and_target_uniprot(name_lig, uniprot, sim):
+def get_common_pdbs_from_ligand_name_and_target_uniprot(name_lig, uniprot, sim,
+                                                       ligands_ids_by_names, ligands_resources_by_names,
+                            ligands_names_and_their_targets_ids, ligands_names_and_their_targets_resources):
     """Get list of pdbs which are in both lists of pdbs 
     INPUT -- ligand's name name_lig (SMILES searched by sim, see function get_smiles_from_name)
     uniprot of target
     OUTPUT -- [(name_lig, uniprot), [list of common pdbs]]
     """
     # Initializing needed global variables
-    global ligands_ids_by_names, ligands_resources_by_names
-    global ligands_names_and_their_targets_ids, ligands_names_and_their_targets_resources
+    #global ligands_ids_by_names, ligands_resources_by_names
+    #global ligands_names_and_their_targets_ids, ligands_names_and_their_targets_resources
     
     # Get pdbs lists for ligand and target
-    smiles_of_ligand = db.get_smiles_from_name(name_lig, ligands_ids_by_names, ligands_resources_by_names)
-    pdbs_of_ligand = db.get_pdbs_from_smiles(smiles_of_ligand, sim)
-    pdbs_of_target = db.get_pdbs_from_uniprot(uniprot)
+    smiles_of_ligand = get_smiles_from_name(name_lig, ligands_ids_by_names, ligands_resources_by_names)
+    pdbs_of_ligand = get_pdbs_from_smiles(smiles_of_ligand, sim)
+    pdbs_of_target = get_pdbs_from_uniprot(uniprot)
     
     # Get list of common pdbs
     common_pdbs = list(set(pdbs_of_target) & set(pdbs_of_ligand[1]))
@@ -204,19 +206,21 @@ def get_common_pdbs_from_ligand_name_and_target_uniprot(name_lig, uniprot, sim):
         return None
         
 
-def get_common_pdbs_with_all_targets_of_ligand(name_lig, sim):
+def get_common_pdbs_with_all_targets_of_ligand(name_lig, sim,
+                                                       ligands_ids_by_names, ligands_resources_by_names,
+                            ligands_names_and_their_targets_ids, ligands_names_and_their_targets_resources):
     """Get list of all pdbs connecting ligand and its target
     INPUT -- ligand's name is name_lig (SMILES searched by sim, see function get_smiles_from_name)
     OUTPUT -- dictionary {[lig_name, uniprot]:[list of common pdbs]}
     """
     # Initializing needed global variables
-    global ligands_ids_by_names, ligands_resources_by_names
-    global ligands_names_and_their_targets_ids, ligands_names_and_their_targets_resources
+    #global ligands_ids_by_names, ligands_resources_by_names
+    #global ligands_names_and_their_targets_ids, ligands_names_and_their_targets_resources
     
     # Get pdbs lists for ligand and target
-    smiles_of_ligand = db.get_smiles_from_name(name_lig, ligands_ids_by_names, ligands_resources_by_names)
-    pdbs_of_ligand = db.get_pdbs_from_smiles(smiles_of_ligand, sim)
-    uniprots_of_targets = db.get_targets_uniprots_from_ligand_name(name_lig, ligands_names_and_their_targets_ids, ligands_names_and_their_targets_resources)
+    smiles_of_ligand = get_smiles_from_name(name_lig, ligands_ids_by_names, ligands_resources_by_names)
+    pdbs_of_ligand = get_pdbs_from_smiles(smiles_of_ligand, sim)
+    uniprots_of_targets = get_targets_uniprots_from_ligand_name(name_lig, ligands_names_and_their_targets_ids, ligands_names_and_their_targets_resources)
     
     # List of lists of all common pdbs
     all_common_pdbs = []
@@ -225,7 +229,7 @@ def get_common_pdbs_with_all_targets_of_ligand(name_lig, sim):
     
     # Get common pdbs and create keys
     for uniprot in uniprots_of_targets:
-        pdbs_of_target = db.get_pdbs_from_uniprot(uniprot)
+        pdbs_of_target = get_pdbs_from_uniprot(uniprot)
         common_pdbs = list(set(pdbs_of_target) & set(pdbs_of_ligand[1]))
         all_common_pdbs.append(common_pdbs)
         keys_ligname_uniprot.append((name_lig, uniprot))
