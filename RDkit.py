@@ -5,7 +5,9 @@ Also here is a function to  calculate similiarity between two fasta sequences wi
 """
 import pandas as pd
 import subprocess
+import json
 
+# More about RDkit https://www.rdkit.org/docs/Cookbook.html
 from rdkit import Chem
 from rdkit import DataStructs
 from rdkit.Chem.Fingerprints import FingerprintMols
@@ -13,12 +15,17 @@ from rdkit.Chem.Fingerprints import FingerprintMols
 from Bio import pairwise2
 import Bio.SubsMat.MatrixInfo
 from Bio.SubsMat.MatrixInfo import *
+
+from pathlib import Path
+
+#import DATABASES_SMILES as db
+#import Drugbank as dr
 # Doesn't work
 #from Bio import SeqIO
 
 
 class get_seq_from_fasta:
-    """Get name and string from .fasta (biopython's SeqIO sometimes doesn't work:( ))"""
+    """Get name (first line of .fasta) and string from .fasta (biopython's SeqIO sometimes doesn't work:( ))"""
     def __init__(self, path):
         with open(path, 'r') as f:
             seq = ''
@@ -77,28 +84,39 @@ def get_TMscore_and_RMSD(pdb1_path, pdb2_path):
     if text.find('TM-score') == -1:
         return(0.0)
     else:
-        #print(text.split('TM-score')[3])
         tm_score = float(text.split('TM-score')[3].split()[1])
         rmsd = float(text.split('RMSD')[1].split()[4])
         return tm_score, rmsd
-    #print(text[ind_tm:ind_tm+40].split()[2])
     
 
 def get_smiles_similiarity(smiles, list_smiles):
-    """Get dictionary sims:smiles_from_list for smiles comparing list_smiles"""
+    """Get dataframe 'query':input SMILES, 
+                    'target_smiles':list_smiles_cleaned, 
+                    'similarity':similarities correspondently
+    INPUT -- SMILES (smiles) and list of smiles to compare with (list_smiles)
+    """
     # Proof and make a list of SMILES
     c_smiles = []
-    for ds in list_smiles:
-        print(ds)
+    # Delete Nones
+    list_smiles_cleaned = [i for i in list_smiles if i]
+    # List of indices to delete because SMILES are invalid
+    del_indices = []
+    for ind, ds in enumerate(list_smiles_cleaned):
         try:
             cs = Chem.CanonSmiles(ds)
             c_smiles.append(cs)
         except:
-            print('Invalid SMILES:', ds)
+            # Delete smiles if it's invalid
+            del_indices.append(ind)
+            print('Invalid SMILES, deleted from list:', ds)
+    # Delete elements starting from end
+    for ind in del_indices[::-1]:
+        del list_smiles_cleaned[ind]
     try:
         smiles = Chem.CanonSmiles(smiles)
     except:
-        print('Invalid SMILES:', ds)    
+        print('Invalid Input SMILES:', ds)
+        return -1
 
     # Make a list of mols
     ms = [Chem.MolFromSmiles(x) for x in c_smiles]
@@ -109,26 +127,47 @@ def get_smiles_similiarity(smiles, list_smiles):
     fp_in = FingerprintMols.FingerprintMol(Chem.MolFromSmiles(smiles))
 
     # Compare all fps with fp_in
-    sim = (DataStructs.BulkTanimotoSimilarity(fp_in, fps[:])) # +1 compare with the next to the last fp
+    sim = (DataStructs.BulkTanimotoSimilarity(fp_in, fps[:]))
     #print()
 
     # Build the dataframe and sort it
-    d = {'query':smiles, 'target_smiles':list_smiles, 'similarity':sim}
+    print(len([smiles]*len(sim)), len(list_smiles_cleaned), len(sim))
+    d = {'query':[smiles]*len(sim), 'smiles':list_smiles_cleaned, 'similarity':sim}
     df_final = pd.DataFrame(data=d)
     df_final = df_final.sort_values('similarity', ascending=False)
     return df_final#dict(zip(df_final['Similarity'], df_final['target']))
     
 
-def get_closest_smiles_name(smiles, ligands_names_and_smiles, k=1):
-    """Get k names and smiles of the closest to input smiles, k=1 by default"""
-    res = get_SMILES_similiarity(smiles, list(ligands_names_and_smiles.values()))
-    result = res[0:k]
+def get_closest_smiles_names(smiles, ligands_names_and_smiles, k=1):
+    """Get k names and smiles of the closest to input smiles, k=1 by default
+    INPUT -- SMILES (smiles) and dictionary names:SMILES (ligands_names_and_smiles)
+            k -- number of smiles to find
+    OUTPUT -- dataframe of similar by smiles ligands: 
+            'name' -- names of ligands
+            'smiles' -- SMILES of ligands
+            'query' -- input SMILES (same for all)
+            'similarity' -- level of similarity (1 - identical, 0 - abs. different)
+    """
+    # Delete ligands with None smiles
+    dict_cleaned = {k: v for k, v in ligands_names_and_smiles.items() if v is not None}
+    # Get dataframe of sorted by descending similarity smiles
+    try:
+        res = get_smiles_similiarity(smiles, list(dict_cleaned.values()))
+    except:
+        if res == -1:
+            print('Input SMILES is invalid, abort')
+    # Take only needed amount of smiles
+    if k < res.size:
+        result = res[0:k]
+    else:
+        result = res
+    # Get names of correspondent ligands
     names = []
-    for sm in result['target_smiles']:
+    for sm in result['smiles']:
         for name in ligands_names_and_smiles.keys():
             if ligands_names_and_smiles[name] == sm:
                 names.append(name)
-    result['Name'] = names
+    result['name'] = names
     return result
 
 # Tests
@@ -139,3 +178,11 @@ def get_closest_smiles_name(smiles, ligands_names_and_smiles, k=1):
 #a = get_SMILES_similiarity('ClCCNC(=O)N(CCCl)N=O', 
 #                       ('CN1CCC[C@@H]1CCO[C@](C)(C1=CC=CC=C1)C1=CC=C(Cl)C=C1', 'ClCCNC(=O)N(CCCl)N=O'))
 #print(a)
+# Test of SMILES search
+name = 'ligands_names_and_smiles'
+root = '/media/anton/b8150e49-6ff0-467b-ad66-40347e8bb188/anton/BACHELOR'
+name_full = str(Path(root) / 'Drugbank_extracted')
+with open(str(Path(name_full) / (name + ".txt")), 'r') as f:
+    exec('global ' + name + '\n' + name + ' = json.load(f)')
+#df = get_closest_smiles_names('ClC1=CC=CC=C1CN1CCCC2=C(C1)C=CS2', ligands_names_and_smiles, 3)
+#print(df, df['name'], df['smiles'],df['query'], df['similarity'])
