@@ -6,6 +6,8 @@ pip install pubchempy
 TM-align
 https://zhanglab.ccmb.med.umich.edu/TM-score/
 sudo apt install tm-align
+or
+conda install -c schrodinger tmalign
 
 
 RDkit
