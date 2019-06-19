@@ -1,18 +1,42 @@
-TM-align
-https://zhanglab.ccmb.med.umich.edu/TM-score/
-sudo apt install tm-align
-
-BioPython
-https://biopython.org/
-conda install -c anaconda biopython
-
 PubChempy
 https://pubchempy.readthedocs.io/en/latest/guide/install.html
 pip install pubchempy
 
 
+TM-align
+https://zhanglab.ccmb.med.umich.edu/TM-score/
+sudo apt install tm-align
+
+
+RDkit
+http://www.rdkit.org/docs/index.html
+conda install -c conda-forge rdk
+
+
+BioPython
+https://biopython.org/
+conda install -c anaconda biopython
+
+
+OPENBABEL
+https://openbabel.org/docs/dev/Installation/install.html
+
+conda install -c openbabel openbabel
+
+
+IsoMIF
+https://github.com/mtthchrtr/IsoMif
+reduce
+http://kinemage.biochem.duke.edu/software/reduce.php
+Get_cleft
+https://github.com/NRGlab/Get_Cleft
+GSL
+https://coral.ise.lehigh.edu/jild13/2016/07/11/hello/
+
+
 POLYPHEN
-http://genetics.bwh.harvard.edu/pph2/dokuwiki/downloads
+http://genetics.bwh.harvard.edu/pph2/dokuwiki/downloads -- download from here
+http://genetics.bwh.harvard.edu/pph2/dokuwiki/appendix_a -- result file explanation
 rsync -rltv --delete-after --port=33444 \
       rsync.wwpdb.org::ftp/data/structures/divided/pdb/ $PPH/wwpdb/divided/pdb/
 
@@ -25,28 +49,10 @@ wget -c ftp://ftp.uniprot.org/pub/databases/uniprot/uniref/uniref100/uniref100.f
 
 wget -c ftp://ftp.uniprot.org/pub/databases/uniprot/uniref/uniref90/uniref90.fasta.gz -O /home/anton/Documents/Unconfirmed955297.crdownload
 
+
 MODELLER
 https://salilab.org/modeller/9.21/release.html#start
 
 sudo env KEY_MODELLER=XXXX
 conda config --add channels salilab
 conda install modeller
-
-OPENBABEL
-https://openbabel.org/docs/dev/Installation/install.html
-
-conda install -c openbabel openbabel 
-
-IsoMIF
-https://github.com/mtthchrtr/IsoMif
-reduce
-http://kinemage.biochem.duke.edu/software/reduce.php
-Get_cleft
-https://github.com/NRGlab/Get_Cleft
-GSL
-https://coral.ise.lehigh.edu/jild13/2016/07/11/hello/
-
-RDkit
-http://www.rdkit.org/docs/index.html
-conda install -c conda-forge rdkit
-
