@@ -9,7 +9,7 @@ import zipfile
 import pubchempy
 
 import DATABASES_SMILES as db
-import RDkit as rd
+#import RDkit as rd
 
 
 def download_drugbank(NAME, PASSWORD, DRUGBANK_PATH, release='5-1-3'):
@@ -19,7 +19,7 @@ def download_drugbank(NAME, PASSWORD, DRUGBANK_PATH, release='5-1-3'):
     !! Carefully use it: the whole database is 130 MB packed, 1.3 GB unpacked
     """
     URL = 'https://www.drugbank.ca/releases/'+ release + '/downloads/all-full-database'
-
+    make_dir(DRUGBANK_PATH)
     OUT_FILE = DRUGBANK_PATH / (URL.split('/')[-1] +'.zip')
     # Get file
     subprocess.check_output(['curl', '-Lfv', '-o', str(OUT_FILE), 
@@ -33,6 +33,15 @@ def download_drugbank(NAME, PASSWORD, DRUGBANK_PATH, release='5-1-3'):
     subprocess.check_output(['rm', OUT_FILE])
 
 
+def make_dir(dir_path):
+    """Make directory with absolute path dir_name recursively"""
+    if not os.path.exists(dir_path):
+        os.makedirs(dir_path, exist_ok=True)
+        print("Directory " , dir_path ,  " Created ")
+    else:
+        pass
+    
+    
 def make_dir_from_list(dirList):
     for dirName in dirList:
         if not os.path.exists(dirName):
@@ -42,8 +51,19 @@ def make_dir_from_list(dirList):
             pass
         
 
+def get_name_seq_from_fasta_lines(fasta):
+    """Returns name and a/a sequence from fasta as a string
+    INPUT - fasta as a string (with \n)
+    OUTPUT - list (name, seq)
+    """
+    fasta_splitted = fasta.split('\n')
+    name = fasta_splitted[0].split('|')[-1]
+    seq = ''.join(fasta_splitted[1:])
+    return name, seq
+        
+
 def dump_info_db(root):
-    """Save all collected from Drugbank data to root/Drugbank_exracted"""
+    """Save all collected from Drugbank data as json files to root/Drugbank_exracted"""
     # All names of files to be dumped to root/Drugbank_extracted with name.txt, where name is from names
     names = ['ligands_unii', 'ligands_drugbank_ids', 'ligands_names', 'ligands_ids', 'ligands_resources',
              'ligands_ids_by_names', 'ligands_resources_by_names',
@@ -51,7 +71,7 @@ def dump_info_db(root):
              'targets_ids', 'targets_resources', 'targets_names',
              'ligands_smiles', 'ligands_names_and_smiles',
              'approved_flags', 'ligands_and_approved_flags',
-             'targets_fastas', #'targets_names_and_fastas',
+             'targets_fastas', 'targets_names_and_fastas',
             ]
     name_full = str(Path(root) / 'Drugbank_extracted')
     make_dir_from_list([name_full])    
@@ -63,7 +83,7 @@ def dump_info_db(root):
 
     
 def load_info_db(root):
-    """Load all collected from Drugbank data from root/Drugbank_exracted"""
+    """Load all collected from Drugbank data as json files from root/Drugbank_exracted"""
     # All names of files to be loaded from root/Drugbank_extracted with name.txt, where name is from names
     names = ['ligands_unii', 'ligands_drugbank_ids', 'ligands_names', 'ligands_ids', 'ligands_resources',
              'ligands_ids_by_names', 'ligands_resources_by_names',
@@ -71,7 +91,7 @@ def load_info_db(root):
              'targets_ids', 'targets_resources', 'targets_names',
              'ligands_smiles', 'ligands_names_and_smiles',
              'approved_flags', 'ligands_and_approved_flags',
-             'targets_fastas', #'targets_names_and_fastas',
+             'targets_fastas', 'targets_names_and_fastas',
             ]
     name_full = str(Path(root) / 'Drugbank_extracted')
 
@@ -90,7 +110,7 @@ def process_drugbank(root, name='full database.xml'):
     https://www.drugbank.ca/docs/drugbank.xsd -- scheme of the base
     """
     # Location of the database
-    source = str(Path(root) / 'Drugbank' / name)
+    source = str(Path(root) / 'Drugbank_extracted' / name)
     # Get an iterable
     context = etree.iterparse(source, events=("start", "end"))
 
@@ -112,7 +132,7 @@ def process_drugbank(root, name='full database.xml'):
     global ligands_smiles, ligands_names_and_smiles
     # For targets
     global targets_ids, targets_resources, targets_names
-    global targets_fastas, targets_names_and_fastas_all, targets_names_and_fastas_dict
+    global targets_fastas, targets_names_and_fastas
     
     
     ligands_unii = []  # List of ligands' UNII ids
@@ -263,14 +283,22 @@ def process_drugbank(root, name='full database.xml'):
     ligands_names_and_their_targets_resources = dict(zip(ligands_names, targets_resources))
     ligands_names_and_smiles = dict(zip(ligands_names, ligands_smiles))
     ligands_and_approved_flags = dict(zip(ligands_names, approved_flags))
+    # Make dictionary {name of target:a/a sequence} and write to file sequences
     list_names = []
     list_fastas = []
-    #for ind1, l_targets in enumerate(targets_names):
-    #    for ind2, name in enumerate(l_targets):
-    #        if name not in list_names:
-    #            list_names.append(name)
-    #            list_fastas.append(targets_fastas[ind1][ind2])
-    #targets_and_fastas_dict = dict(zip(list_names, list_fastas))
+    # Create file where to save fastas
+    with open(str(Path(root) / 'Drugbank_extracted' / 'Drugbank_targets.fasta'), "w+") as myfile:
+        pass
+    for l_targets in targets_fastas:
+        for fasta in l_targets:
+            name, seq = get_name_seq_from_fasta_lines(fasta)
+            if name not in list_names:
+                list_names.append(name)
+                list_fastas.append(seq)
+                with open(str(Path(root) / 'Drugbank_extracted' / 'Drugbank_targets.fasta'), "a+") as myfile:
+                    myfile.write(fasta)
+                    myfile.write('\n')
+    targets_names_and_fastas = dict(zip(list_names, list_fastas))
     
     # Save obtained data        
     dump_info_db(root)
@@ -307,30 +335,29 @@ if __name__ == "__main__":
     global ligands_unii, ligands_drugbank_ids, ligands_names, ligands_ids, ligands_resources
     global ligands_ids_by_names, ligands_resources_by_names
     global approved_flags, ligands_and_approved_flags
-    global targets_fastas, targets_names_and_fastas
     # For ligands and their targets
     global ligands_smiles, ligands_names_and_smiles
     global ligands_names_and_their_targets_ids, ligands_names_and_their_targets_resources
     # For targets
     global targets_ids, targets_resources, targets_names
+    global targets_fastas, targets_names_and_fastas
     
     # Directory where all data placed
-    root = '/media/anton/b8150e49-6ff0-467b-ad66-40347e8bb188/anton/BACHELOR'
-    ROOT_PATH = '/media/anton/b8150e49-6ff0-467b-ad66-40347e8bb188/anton/BACHELOR'
-    
+    #root = '/media/anton/b8150e49-6ff0-467b-ad66-40347e8bb188/anton/BACHELOR'
+    root = '/home/anton_maximov/BACHELOR'
     
     # If needed to download new version of Drugbank
-    #DRUGBANK_PATH = Path(root) / 'Drugbank'
+    DRUGBANK_PATH = Path(root) / 'Drugbank_extracted'
     #download_drugbank('maksimov.as@phystech.edu', 'drugsandbanks', DRUGBANK_PATH, release='5-1-3')
     
     # Processing if new information needed or wasn't dumped before
-    #process_drugbank(root)
+    process_drugbank(root)
     # Add SMILES of ligands which don't have one in Drugbank but have it in PubChem
-    #add_smiles_from_pubchem(root, ligands_names_and_smiles)
+    add_smiles_from_pubchem(root, ligands_names_and_smiles)
     
     # Start of user actions
     # Load data from .txts from root/Drugbank_extracted to program
-    load_info_db(root)
+    #load_info_db(root)
     
     # Some checks of work
     #print(ligands_ids_by_names)
