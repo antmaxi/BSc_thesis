@@ -759,19 +759,4 @@ understanding side-effects:},
   mendeley-groups = {Diplom},
 }
 
-@Article{Levitt2002,
-  author          = {Levitt, M. and Gerstein, M.},
-  title           = {{A unified statistical framework for sequence comparison and structure comparison}},
-  journal         = {Proceedings of the National Academy of Sciences},
-  year            = {2002},
-  volume          = {95},
-  number          = {11},
-  pages           = {5913--5920},
-  issn            = {0027-8424},
-  abstract        = {We present an appropach for assessing the significance of sequence and structure comparisons by using nearly identical statistical fromalisms for both sequence and structure. Doing so involves an all vs. all comparison of protein domains [taken here from the structural classifcations of proteins (scop) databse] and then fitting a simple distribution function to the observed scores. By using this distribution we can attack a statistical significane to each comparison score in the form of a P value, the probability that a better score would occur by chance. As expected, we find that the scores for sequence matching follow an extreme-value distribution. The agreement, moreover, between the P values that we derive from this distribution and those reported by standard programs (e.g. BLAST and FASTA) validates our approach. Structure comparison scores also follow an extreme-value distribution when the statistics are expressed in terms of a structural alignment score (essentially the sum of reciprocated distances between aligned atoms minus gap penalties). We find that the traditional metric of structural similarity, the rms deviation in atom positions after fitting aligned atoms, follows a different distribution of scores and does not perform as well as the structural alignment score. Comparison of the sequence and structure statitstics for pairs of proteins known to be related distantly shows that structural comparison is able to detect approxiamtely twice as many distant relationships as sequence comparison at the same error rate. The comparison also indicates that there are very few pairs with significant similarity in terms of seuence by not structure wheras many paris have significatn similarity in terms of structure but not sequence},
-  doi             = {10.1073/pnas.95.11.5913},
-  file            = {:media/anton/b8150e49-6ff0-467b-ad66-40347e8bb188/anton/BACHELOR/Articles/ligands/LG-score.pdf:pdf},
-  mendeley-groups = {Diplom},
-}
-
 @Comment{jabref-meta: databaseType:bibtex;}

@@ -8,45 +8,45 @@ Warning--I'm ignoring DOPEShen2006's extra "note" field
 Warning--I'm ignoring DOPEShen2006's extra "note" field
 --line 627 of file Diplom_lit.bib
 Warning--I didn't find a database entry for "SKOLNICK20151163"
-You've used 42 entries,
+You've used 44 entries,
             1791 wiz_defined-function locations,
-            778 strings with 12425 characters,
-and the built_in function-call counts, 11353 in all, are:
-= -- 1016
-> -- 525
+            791 strings with 12746 characters,
+and the built_in function-call counts, 11871 in all, are:
+= -- 1068
+> -- 541
 < -- 6
-+ -- 190
-- -- 148
-* -- 965
-:= -- 1795
-add.period$ -- 138
-call.type$ -- 42
-change.case$ -- 42
++ -- 196
+- -- 152
+* -- 1009
+:= -- 1873
+add.period$ -- 144
+call.type$ -- 44
+change.case$ -- 44
 chr.to.int$ -- 0
-cite$ -- 42
-duplicate$ -- 432
-empty$ -- 1069
-format.name$ -- 148
-if$ -- 2503
+cite$ -- 44
+duplicate$ -- 450
+empty$ -- 1121
+format.name$ -- 152
+if$ -- 2615
 int.to.chr$ -- 0
-int.to.str$ -- 42
-missing$ -- 42
-newline$ -- 221
-num.names$ -- 42
-pop$ -- 52
+int.to.str$ -- 44
+missing$ -- 44
+newline$ -- 231
+num.names$ -- 44
+pop$ -- 54
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 178
+skip$ -- 186
 stack$ -- 0
-substring$ -- 992
-swap$ -- 82
+substring$ -- 1054
+swap$ -- 84
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 104
-width$ -- 44
-write$ -- 486
+while$ -- 110
+width$ -- 46
+write$ -- 508
 (There were 3 warnings)

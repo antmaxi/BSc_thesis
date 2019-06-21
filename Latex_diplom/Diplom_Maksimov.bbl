@@ -73,6 +73,20 @@ Yang Zhang and Jeffrey Skolnick.
   TM-score}.
 \newblock {\em Nucleic Acids Research}, 33(7):2302--2309, 01 2005.
 
+\bibitem{Levitt1998}
+M.~Levitt and M.~Gerstein.
+\newblock A unified statistical framework for sequence comparison and structure
+  comparison.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  95(11):5913--5920, May 1998.
+
+\bibitem{Levitt2002}
+M.~Levitt and M.~Gerstein.
+\newblock {A unified statistical framework for sequence comparison and
+  structure comparison}.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  95(11):5913--5920, 2002.
+
 \bibitem{Cereto-Massague2015}
 Adri{\`{a}} Cereto-Massagu{\'{e}}, Mar{\'{i}}a~Jos{\'{e}} Ojeda, Cristina
   Valls, Miquel Mulero, Santiago Garcia-Vallv{\'{e}}, and Gerard Pujadas.
