@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Diplom_Maksimov.aux
+The style file: unsrt.bst
+Database file #1: Diplom_lit.bib
+Warning--I'm ignoring DOPEShen2006's extra "note" field
+--line 626 of file Diplom_lit.bib
+Warning--I'm ignoring DOPEShen2006's extra "note" field
+--line 627 of file Diplom_lit.bib
+Warning--I didn't find a database entry for "SKOLNICK20151163"
+You've used 42 entries,
+            1791 wiz_defined-function locations,
+            778 strings with 12425 characters,
+and the built_in function-call counts, 11353 in all, are:
+= -- 1016
+> -- 525
+< -- 6
++ -- 190
+- -- 148
+* -- 965
+:= -- 1795
+add.period$ -- 138
+call.type$ -- 42
+change.case$ -- 42
+chr.to.int$ -- 0
+cite$ -- 42
+duplicate$ -- 432
+empty$ -- 1069
+format.name$ -- 148
+if$ -- 2503
+int.to.chr$ -- 0
+int.to.str$ -- 42
+missing$ -- 42
+newline$ -- 221
+num.names$ -- 42
+pop$ -- 52
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 178
+stack$ -- 0
+substring$ -- 992
+swap$ -- 82
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 104
+width$ -- 44
+write$ -- 486
+(There were 3 warnings)

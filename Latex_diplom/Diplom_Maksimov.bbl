@@ -1,0 +1,264 @@
+\begin{thebibliography}{10}
+
+\bibitem{Anighoro2014}
+Andrew Anighoro, J??rgen Bajorath, and Giulio Rastelli.
+\newblock {Polypharmacology: Challenges and opportunities in drug discovery}.
+\newblock {\em Journal of Medicinal Chemistry}, 57(19):7874--7887, 2014.
+
+\bibitem{Chaudhari}
+Rajan Chaudhari et~al.
+\newblock Computational polypharmacology: a new paradigm for drug discovery.
+\newblock {\em Expert Opinion on Drug Discovery}, 12(3):279--291, 2017.
+\newblock PMID: 28067061.
+
+\bibitem{Loving}
+Kathryn~A. Loving, Andy Lin, and Alan~C. Cheng.
+\newblock Structure-based druggability assessment of the mammalian structural
+  proteome with inclusion of light protein flexibility.
+\newblock {\em PLOS Computational Biology}, 10(7):1--13, 07 2014.
+
+\bibitem{Rognan2010}
+Didier Rognan.
+\newblock Structure-based approaches to target fishing and ligand profiling.
+\newblock {\em Molecular Informatics}, 29(3):176--187, mar 2010.
+
+\bibitem{Hall2015}
+David~R. Hall, Dima Kozakov, Adrian Whitty, and Sandor Vajda.
+\newblock Lessons from hot spot analysis for fragment-based drug discovery.
+\newblock {\em Trends in Pharmacological Sciences}, 36(11):724--736, Nov 2015.
+
+\bibitem{March-Vila2017}
+Eric March-Vila, Luca Pinzi, No{\'{e}} Sturm, Annachiara Tinivella, Ola
+  Engkvist, Hongming Chen, and Giulio Rastelli.
+\newblock {On the integration of in silico drug design methods for drug
+  repurposing}.
+\newblock {\em Frontiers in Pharmacology}, 8(MAY):1--7, 2017.
+
+\bibitem{Ehrt2016}
+Christiane Ehrt, Tobias Brinkjost, and Oliver Koch.
+\newblock Impact of binding site comparisons on medicinal chemistry and
+  rational molecular design.
+\newblock {\em Journal of Medicinal Chemistry}, 59(9):4121--4151, May 2016.
+
+\bibitem{Cabrera}
+Alvaro Cortés-Cabrera, Garrett~M Morris, Paul~W Finn, Antonio Morreale, and
+  Federico Gago.
+\newblock Comparison of ultra-fast 2d and 3d ligand and target descriptors for
+  side effect prediction and network analysis in polypharmacology.
+\newblock {\em British Journal of Pharmacology}, 170(3):557--567, 2013.
+
+\bibitem{Brylinski}
+Michal Brylinski.
+\newblock Local alignment of ligand binding sites in proteins for
+  polypharmacology and drug repositioning.
+\newblock In {\em Protein function prediction}, volume 1611 of {\em Methods in
+  Molecular Biology}, pages 109 -- 122. Humana Press, New York, NY, 2017.
+
+\bibitem{Govindaraj2018}
+Rajiv~Gandhi Govindaraj and Michal Brylinski.
+\newblock Comparative assessment of strategies to identify similar
+  ligand-binding pockets in proteins.
+\newblock {\em BMC Bioinformatics}, 19(1):91, Mar 2018.
+
+\bibitem{Chartier2017}
+Matthieu Chartier, Louis~Philippe Morency, Mar{\'{i}}a~In{\'{e}}s Zylber, and
+  Rafael~J. Najmanovich.
+\newblock {Large-scale detection of drug off-targets: Hypotheses for drug
+  repurposing and understanding side-effects}.
+\newblock {\em BMC Pharmacology and Toxicology}, 18(1):1--16, 2017.
+
+\bibitem{TM-align}
+Yang Zhang and Jeffrey Skolnick.
+\newblock {TM-align: a protein structure alignment algorithm based on the
+  TM-score}.
+\newblock {\em Nucleic Acids Research}, 33(7):2302--2309, 01 2005.
+
+\bibitem{Cereto-Massague2015}
+Adri{\`{a}} Cereto-Massagu{\'{e}}, Mar{\'{i}}a~Jos{\'{e}} Ojeda, Cristina
+  Valls, Miquel Mulero, Santiago Garcia-Vallv{\'{e}}, and Gerard Pujadas.
+\newblock {Molecular fingerprint similarity search in virtual screening}.
+\newblock {\em Methods}, 71(C):58--63, 2015.
+
+\bibitem{Chartier2015}
+Matthieu Chartier and Rafael Najmanovich.
+\newblock {Detection of Binding Site Molecular Interaction Field Similarities}.
+\newblock {\em Journal of Chemical Information and Modeling}, 55(8):1600--1615,
+  2015.
+
+\bibitem{Bron1973}
+Coen Bron and Joep Kerbosch.
+\newblock {Algorithm 457: finding all cliques of an undirected graph}.
+\newblock {\em Communications of the ACM}, 16(9):575--577, 1973.
+
+\bibitem{Tomita2006}
+Etsuji Tomita, Akira Tanaka, and Haruhisa Takahashi.
+\newblock {The worst-case time complexity for generating all maximal cliques
+  and computational experiments}.
+\newblock {\em Theoretical Computer Science}, 363(1):28--42, 2006.
+
+\bibitem{Fredriksson1256}
+Robert Fredriksson, Malin~C. Lagerstr{\"o}m, Lars-Gustav Lundin, and Helgi~B.
+  Schi{\"o}th.
+\newblock The g-protein-coupled receptors in the human genome form five main
+  families. phylogenetic analysis, paralogon groups, and fingerprints.
+\newblock {\em Molecular Pharmacology}, 63(6):1256--1272, 2003.
+
+\bibitem{Hilger2018}
+Daniel Hilger, Matthieu Masureel, and Brian~K. Kobilka.
+\newblock {Structure and dynamics of GPCR signaling complexes}.
+\newblock {\em Nature Structural and Molecular Biology}, 25(1):4--12, 2018.
+
+\bibitem{Hauser2017}
+Alexander~S. Hauser, Misty~M. Attwood, Mathias Rask-Andersen, Helgi~B.
+  Schi{\"o}th, and David~E. Gloriam.
+\newblock Trends in gpcr drug discovery: new agents, targets and indications.
+\newblock {\em Nature Reviews Drug Discovery}, 16:829 EP --, Oct 2017.
+
+\bibitem{Katritch2012Diversity}
+Vsevolod Katritch, Vadim Cherezov, and Raymond~C. Stevens.
+\newblock {Diversity and modularity of G protein-coupled receptor structures}.
+\newblock {\em Trends in Pharmacological Sciences}, 33(1):17--27, 2012.
+
+\bibitem{KUFAREVA20141120}
+Irina Kufareva, Vsevolod Katritch, Raymond C. Stevens, and Ruben Abagyan.
+\newblock Advances in gpcr modeling evaluated by the gpcr dock 2013 assessment:
+  Meeting new challenges.
+\newblock {\em Structure}, 22(8):1120 -- 1139, 2014.
+
+\bibitem{Katritch2012}
+Vsevolod Katritch, Vadim Cherezov, and Raymond~C. Stevens.
+\newblock Structure-function of the g protein–coupled receptor superfamily.
+\newblock {\em Annual Review of Pharmacology and Toxicology}, 53(1):531--556,
+  2013.
+\newblock PMID: 23140243.
+
+\bibitem{KATRITCH2011108}
+Vsevolod Katritch, Irina Kufareva, and Ruben Abagyan.
+\newblock Structure based prediction of subtype-selectivity for adenosine
+  receptor antagonists.
+\newblock {\em Neuropharmacology}, 60(1):108 -- 115, 2011.
+\newblock High Resolution.
+
+\bibitem{SHONBERG20153880}
+Jeremy Shonberg, Ralf~C. Kling, Peter Gmeiner, and Stefan Löber.
+\newblock Gpcr crystal structures: Medicinal chemistry in the pocket.
+\newblock {\em Bioorganic \& Medicinal Chemistry}, 23(14):3880 -- 3906, 2015.
+\newblock Selective GCPR Ligands.
+
+\bibitem{Wootten2013}
+Denise Wootten, Arthur Christopoulos, and Patrick~M. Sexton.
+\newblock Emerging paradigms in gpcr allostery: implications for drug
+  discovery.
+\newblock {\em Nature Reviews Drug Discovery}, 12:630 EP --, Aug 2013.
+\newblock Review Article.
+
+\bibitem{Lane2017}
+J.~Robert Lane, Lauren~T. May, Robert~G. Parton, Patrick~M. Sexton, and Arthur
+  Christopoulos.
+\newblock A kinetic view of gpcr allostery and biased agonism.
+\newblock {\em Nature Chemical Biology}, 13:929 EP --, Aug 2017.
+\newblock Perspective.
+
+\bibitem{Webb2017}
+Benjamin Webb and Andrej Sali.
+\newblock Protein structure modeling with {MODELLER}.
+\newblock In {\em Methods in Molecular Biology}, pages 39--54. Springer New
+  York, 2017.
+
+\bibitem{BetterDOPE}
+Guang~Qiang Dong, Hao Fan, Dina Schneidman-Duhovny, Ben Webb, and Andrej Sali.
+\newblock Optimized atomic statistical potentials: assessment of protein
+  interfaces and loops.
+\newblock {\em Bioinformatics}, 29(24):3158--3166, 2013.
+
+\bibitem{Tautermann2017}
+Christofer~S. Tautermann.
+\newblock Gpcr homology model generation for lead optimization.
+\newblock In {\em Methods in Molecular Biology}, pages 115--131. Springer New
+  York, nov 2017.
+
+\bibitem{ALTSCHUL1990403}
+Stephen~F. Altschul, Warren Gish, Webb Miller, Eugene~W. Myers, and David~J.
+  Lipman.
+\newblock Basic local alignment search tool.
+\newblock {\em Journal of Molecular Biology}, 215(3):403 -- 410, 1990.
+
+\bibitem{Altschul1997}
+Stephen~F. Altschul, Thomas~L. Madden, Alejandro~A. Schäffer, Jinghui Zhang,
+  Zheng Zhang, Webb Miller, and David~J. Lipman.
+\newblock Gapped blast and psi-blast: a new generation of protein database
+  search programs.
+\newblock {\em Nucleic Acids Research}, 25(17):3389--3402, 1997.
+
+\bibitem{Thompson}
+Julie~D. Thompson, Desmond~G. Higgins, and Toby~J. Gibson.
+\newblock Clustal w: improving the sensitivity of progressive multiple sequence
+  alignment through sequence weighting, position-specific gap penalties and
+  weight matrix choice.
+\newblock {\em Nucleic Acids Research}, 22(22):4673--4680, 1994.
+
+\bibitem{Remmert2011}
+Michael Remmert, Andreas Biegert, Andreas Hauser, and Johannes S{\"o}ding.
+\newblock Hhblits: lightning-fast iterative protein sequence searching by
+  hmm-hmm alignment.
+\newblock {\em Nature Methods}, 9:173 EP --, Dec 2011.
+
+\bibitem{Hauser2013}
+Maria Hauser, Christian~E Mayer, and Johannes S\"{o}ding.
+\newblock {kClust}: fast and sensitive clustering of large protein sequence
+  databases.
+\newblock {\em {BMC} Bioinformatics}, 14(1):248, 2013.
+
+\bibitem{ROHL200466}
+Carol~A. Rohl, Charlie~E.M. Strauss, Kira~M.S. Misura, and David Baker.
+\newblock Protein structure prediction using rosetta.
+\newblock In {\em Numerical Computer Methods, Part D}, volume 383 of {\em
+  Methods in Enzymology}, pages 66 -- 93. Academic Press, 2004.
+
+\bibitem{Song2013}
+Yifan Song, Frank DiMaio, Ray~Yu-Ruei Wang, David Kim, Chris Miles,
+  TJ~Brunette, James Thompson, and David Baker.
+\newblock High-resolution comparative modeling with {RosettaCM}.
+\newblock {\em Structure}, 21(10):1735--1742, oct 2013.
+
+\bibitem{iTasser}
+Jianyi Yang, Renxiang Yan, Ambrish Roy, Dong Xu, Jonathan Poisson, and Yang
+  Zhang.
+\newblock The i-{TASSER} suite: protein structure and function prediction.
+\newblock {\em Nature Methods}, 12(1):7--8, jan 2015.
+
+\bibitem{Raptor}
+Sheng Wang, Wei Li, Shiwang Liu, and Jinbo Xu.
+\newblock Raptorx-property: a web server for protein structure property
+  prediction.
+\newblock {\em Nucleic Acids Research}, 44(W1):W430--W435, 2016.
+
+\bibitem{Deng}
+Haiyou Deng, Ya~Jia, and Yang Zhang.
+\newblock Protein structure prediction.
+\newblock {\em International Journal of Modern Physics B}, 32(18):1840009,
+  2018.
+
+\bibitem{DOPEShen2006}
+Min-Yi Shen and Andrej Sali.
+\newblock Statistical potential for assessment and prediction of protein
+  structures.
+\newblock {\em Protein Sci}, 15(11):2507--2524, Nov 2006.
+\newblock 17075131[pmid].
+
+\bibitem{Nowroozi}
+Amin Nowroozi and Mohsen Shahlaei.
+\newblock A coupling of homology modeling with multiple molecular dynamics
+  simulation for identifying representative conformation of gpcr structures: a
+  case study on human bombesin receptor subtype-3.
+\newblock {\em Journal of Biomolecular Structure and Dynamics}, 35(2):250--272,
+  2017.
+\newblock PMID: 26922838.
+
+\bibitem{Pradeep2012}
+H.~Pradeep and G.~K. Rajanikant.
+\newblock A rational approach to selective pharmacophore designing: an
+  innovative strategy for specific recognition of gsk3$\beta$.
+\newblock {\em Molecular Diversity}, 16(3):553--562, Aug 2012.
+
+\end{thebibliography}
