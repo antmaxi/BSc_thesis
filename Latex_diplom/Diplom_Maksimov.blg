@@ -1,18 +1,18 @@
 [0] Config.pm:340> INFO - This is Biber 2.4
 [1] Config.pm:343> INFO - Logfile is 'Diplom_Maksimov.blg'
-[113] biber:287> INFO - === Сб июн 22, 2019, 15:16:30
-[816] Biber.pm:348> INFO - Reading 'Diplom_Maksimov.bcf'
-[1607] Biber.pm:742> INFO - Found 19 citekeys in bib section 0
-[1639] Biber.pm:3151> INFO - Processing section 0
-[1766] Biber.pm:3308> INFO - Looking for bibtex format file 'cite/Literature.bib' for section 0
-[3262] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
-[4193] bibtex.pm:974> INFO - Found BibTeX data source 'cite/Literature.bib'
-[4454] Utils.pm:147> WARN - ISBN '0022-2623' in entry 'Anighoro2014' is invalid - run biber with '--validate_datamodel' for details.
-[4962] Utils.pm:147> WARN - ISBN '1663-9812' in entry 'March-Vila2017' is invalid - run biber with '--validate_datamodel' for details.
-[5238] Utils.pm:147> WARN - ISBN '20506511 (Electronic)' in entry 'Chartier2017' is invalid - run biber with '--validate_datamodel' for details.
-[5933] UCollate.pm:65> INFO - Overriding locale 'ru-RU' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[5934] UCollate.pm:65> INFO - Overriding locale 'ru-RU' defaults 'variable = shifted' with 'variable = non-ignorable'
-[5934] Biber.pm:3028> INFO - Sorting list 'none/global' of type 'entry' with scheme 'none' and locale 'ru-RU'
-[6010] bbl.pm:519> INFO - Writing 'Diplom_Maksimov.bbl' with encoding 'UTF-8'
-[6508] bbl.pm:615> INFO - Output to Diplom_Maksimov.bbl
-[6509] Biber.pm:109> INFO - WARNINGS: 3
+[197] biber:287> INFO - === Сб июн 22, 2019, 16:53:25
+[2622] Biber.pm:348> INFO - Reading 'Diplom_Maksimov.bcf'
+[3498] Biber.pm:742> INFO - Found 28 citekeys in bib section 0
+[3554] Biber.pm:3151> INFO - Processing section 0
+[3774] Biber.pm:3308> INFO - Looking for bibtex format file 'cite/Literature.bib' for section 0
+[5024] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
+[5500] bibtex.pm:974> INFO - Found BibTeX data source 'cite/Literature.bib'
+[6745] Utils.pm:147> WARN - ISBN '0022-2623' in entry 'Anighoro2014' is invalid - run biber with '--validate_datamodel' for details.
+[7505] Utils.pm:147> WARN - ISBN '1663-9812' in entry 'March-Vila2017' is invalid - run biber with '--validate_datamodel' for details.
+[7707] Utils.pm:147> WARN - ISBN '20506511 (Electronic)' in entry 'Chartier2017' is invalid - run biber with '--validate_datamodel' for details.
+[11495] UCollate.pm:65> INFO - Overriding locale 'ru-RU' defaults 'variable = shifted' with 'variable = non-ignorable'
+[11498] UCollate.pm:65> INFO - Overriding locale 'ru-RU' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[11499] Biber.pm:3028> INFO - Sorting list 'none/global' of type 'entry' with scheme 'none' and locale 'ru-RU'
+[11634] bbl.pm:519> INFO - Writing 'Diplom_Maksimov.bbl' with encoding 'UTF-8'
+[12284] bbl.pm:615> INFO - Output to Diplom_Maksimov.bbl
+[12289] Biber.pm:109> INFO - WARNINGS: 3

@@ -384,125 +384,6 @@
       \verb https://doi.org/10.1021/acs.jmedchem.6b00078
       \endverb
     \endentry
-    \entry{Cabrera}{article}{useauthor=false}
-      \name{author}{5}{}{%
-        {{hash=2e12716fba830d75360dd08663a8bf0b}{%
-           family={Cortés-Cabrera},
-           family_i={C\bibinithyphendelim C\bibinitperiod},
-           given={Alvaro},
-           given_i={A\bibinitperiod}}}%
-        {{hash=03875878cdd3ca1814f4d19b2b707378}{%
-           family={Morris},
-           family_i={M\bibinitperiod},
-           given={Garrett\bibnamedelima M},
-           given_i={G\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=3432dda8e502be9d3d82513904cbf9ce}{%
-           family={Finn},
-           family_i={F\bibinitperiod},
-           given={Paul\bibnamedelima W},
-           given_i={P\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-        {{hash=fee01ad3fe2de0e407210a2259d1a387}{%
-           family={Morreale},
-           family_i={M\bibinitperiod},
-           given={Antonio},
-           given_i={A\bibinitperiod}}}%
-        {{hash=b082f04dab034050c46f535ab1ddd91e}{%
-           family={Gago},
-           family_i={G\bibinitperiod},
-           given={Federico},
-           given_i={F\bibinitperiod}}}%
-      }
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Background and Purpose Some existing computational methods are used to infer protein targets of small molecules and can therefore be used to find new targets for existing drugs, with the goals of re-directing the molecule towards a different therapeutic purpose or explaining off-target effects due to multiple targeting. Inherent limitations, however, arise from the fact that chemical analogy is calculated on the basis of common frameworks or scaffolds and also because target information is neglected. The method we present addresses these issues by taking into account 3D information from both the ligand and the target. Experimental Approach ElectroShape is an established method for ultra-fast comparison of the shapes and charge distributions of ligands that is validated here for prediction of on-target activities, off-target profiles and adverse effects of drugs and drug-like molecules taken from the DrugBank database. Key Results The method is shown to predict polypharmacology profiles and relate targets from two complementary viewpoints (ligand- and target-based networks). Conclusions and Implications The open-access web tool presented here (http://ub.cbm.uam.es/chemogenomics/) allows interactive navigation in a unified ‘pharmacological space’ from the viewpoints of both ligands and targets. It also enables prediction of pharmacological profiles, including likely side effects, for new compounds. We hope this web interface will help many pharmacologists to become aware of this new paradigm (up to now mostly used in the realm of the so-called ‘chemical biology’) and encourage its use with a view to revealing ‘hidden’ relationships between new and existing compounds and pharmacologically relevant targets.}
-      \field{journaltitle}{British Journal of Pharmacology}
-      \field{title}{Comparison of ultra-fast 2D and 3D ligand and target descriptors for side effect prediction and network analysis in polypharmacology}
-      \field{year}{2013}
-      \field{number}{3}
-      \range{number}{1}
-      \field{pages}{557\bibrangedash 567}
-      \range{pages}{11}
-      \field{volume}{170}
-      \range{volume}{1}
-      \verb{doi}
-      \verb 10.1111/bph.12294
-      \endverb
-      \verb{eprint}
-      \verb https://bpspubs.onlinelibrary.wiley.com/doi/pdf/10.1111/bph.12294
-      \endverb
-      \verb{url}
-      \verb https://bpspubs.onlinelibrary.wiley.com/doi/abs/10.1111/bph.12294
-      \endverb
-      \keyw{adverse drug reactions,chemical fingerprints,drug targets,polypharmacology,side effects}
-    \endentry
-    \entry{Brylinski}{incollection}{}
-      \name{author}{1}{}{%
-        {{hash=34bc12bae92d8f44154bdf97a7ce54e5}{%
-           family={Brylinski},
-           family_i={B\bibinitperiod},
-           given={Michal},
-           given_i={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Humana Press, New York, NY}%
-      }
-      \strng{namehash}{34bc12bae92d8f44154bdf97a7ce54e5}
-      \strng{fullhash}{34bc12bae92d8f44154bdf97a7ce54e5}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Protein function prediction}
-      \field{series}{Methods in Molecular Biology}
-      \field{title}{Local Alignment of Ligand Binding Sites in Proteins for Polypharmacology and Drug Repositioning}
-      \field{year}{2017}
-      \field{pages}{109\bibrangedash 122}
-      \range{pages}{14}
-      \field{volume}{1611}
-      \range{volume}{1}
-      \verb{url}
-      \verb https://link.springer.com/protocol/10.1007%2F978-1-4939-7015-5_9
-      \endverb
-    \endentry
-    \entry{Govindaraj2018}{article}{}
-      \name{author}{2}{}{%
-        {{hash=45100e74477f4a616a5f8d3f6137ddbc}{%
-           family={Govindaraj},
-           family_i={G\bibinitperiod},
-           given={Rajiv\bibnamedelima Gandhi},
-           given_i={R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-        {{hash=34bc12bae92d8f44154bdf97a7ce54e5}{%
-           family={Brylinski},
-           family_i={B\bibinitperiod},
-           given={Michal},
-           given_i={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{3cd3f76198579a97c7371e1bbba56897}
-      \strng{fullhash}{3cd3f76198579a97c7371e1bbba56897}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Detecting similar ligand-binding sites in globally unrelated proteins has a wide range of applications in modern drug discovery, including drug repurposing, the prediction of side effects, and drug-target interactions. Although a number of techniques to compare binding pockets have been developed, this problem still poses significant challenges.}
-      \field{issn}{1471-2105}
-      \field{journaltitle}{BMC Bioinformatics}
-      \field{month}{03}
-      \field{title}{Comparative assessment of strategies to identify similar ligand-binding pockets in proteins}
-      \field{year}{2018}
-      \field{number}{1}
-      \range{number}{1}
-      \field{pages}{91}
-      \range{pages}{1}
-      \field{volume}{19}
-      \range{volume}{1}
-      \verb{doi}
-      \verb 10.1186/s12859-018-2109-2
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1186/s12859-018-2109-2
-      \endverb
-    \endentry
     \entry{Chartier2017}{article}{useauthor=false}
       \name{author}{4}{}{%
         {{hash=4ca62937d0e37842f3f5f24d3c81f502}{%
@@ -552,6 +433,103 @@
       \verb :media/anton/b8150e49-6ff0-467b-ad66-40347e8bb188/anton/BACHELOR/Articles/Large-scale detection of drug off-targets$\backslash$: hypotheses for drug repurposing and understanding side-effects:
       \endverb
       \keyw{Binding-site similarities,Cross-reactivity,Drug repurposing,Large-scale analysis,Molecularinteraction field similarities,Promiscuity,Side-effects}
+    \endentry
+    \entry{drugbank}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://www.drugbank.ca
+      \endverb
+    \endentry
+    \entry{uniprot}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://www.uniprot.org
+      \endverb
+    \endentry
+    \entry{pdb}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://www.rcsb.org
+      \endverb
+    \endentry
+    \entry{pubchem}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://pubchem.ncbi.nlm.nih.gov
+      \endverb
+    \endentry
+    \entry{Jaccard1901}{article}{}
+      \name{author}{1}{}{%
+        {{hash=87a064a14b90f16946db798a8b99a5d0}{%
+           family={Jaccard},
+           family_i={J\bibinitperiod},
+           given={P.},
+           given_i={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{87a064a14b90f16946db798a8b99a5d0}
+      \strng{fullhash}{87a064a14b90f16946db798a8b99a5d0}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bulletin de la Société Vaudoise des Sciences Naturelles}
+      \field{title}{Comparative de la distribuition florale dans une portion des Alpes et des Jura}
+      \field{year}{1901}
+      \field{number}{7}
+      \range{number}{1}
+      \field{pages}{547\bibrangedash 579}
+      \range{pages}{33}
+    \endentry
+    \entry{biopython}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://biopython.org
+      \endverb
+    \endentry
+    \entry{TM}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://zhanglab.ccmb.med.umich.edu/TM-align
+      \endverb
+    \endentry
+    \entry{Lathrop1994}{article}{}
+      \name{author}{1}{}{%
+        {{hash=205bc26913ad40c3586cb065d86ef716}{%
+           family={Lathrop},
+           family_i={L\bibinitperiod},
+           given={Richard\bibnamedelima H.},
+           given_i={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press ({OUP})}%
+      }
+      \strng{namehash}{205bc26913ad40c3586cb065d86ef716}
+      \strng{fullhash}{205bc26913ad40c3586cb065d86ef716}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{"Protein Engineering, Design and Selection"}
+      \field{title}{The protein threading problem with sequence amino acid interaction preferences is {NP}-complete}
+      \field{year}{1994}
+      \field{number}{9}
+      \range{number}{1}
+      \field{pages}{1059\bibrangedash 1068}
+      \range{pages}{10}
+      \field{volume}{7}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1093/protein/7.9.1059
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/protein/7.9.1059
+      \endverb
     \endentry
     \entry{Levitt1998}{article}{}
       \name{author}{2}{}{%
@@ -646,6 +624,27 @@
       \verb :media/anton/b8150e49-6ff0-467b-ad66-40347e8bb188/anton/BACHELOR/Articles/ligands/2015{\_}Molecular fingerprint similarity search in virtual screening.pdf:pdf
       \endverb
       \keyw{Comparison,Data fusion,Fingerprints,Similarity search,Virtual screening}
+    \endentry
+    \entry{rdkit}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb http://www.rdkit.org/docs/index.html
+      \endverb
+    \endentry
+    \entry{openbabel}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb http://openbabel.org/wiki/Main_Page
+      \endverb
+    \endentry
+    \entry{isomif}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://github.com/mtthchrtr/IsoMif
+      \endverb
     \endentry
     \entry{Chartier2015}{article}{}
       \name{author}{2}{}{%
@@ -838,6 +837,13 @@
       \verb :media/anton/b8150e49-6ff0-467b-ad66-40347e8bb188/anton/BACHELOR/Articles/Bron{\_}Kerbosh{\_}modified{\_}2006{\_}The worst-case time complexity for generating all maximal cliques and computational experiments.pdf:pdf
       \endverb
       \keyw{Computational experiments,Enumeration,Maximal cliques,Worst-case time complexity}
+    \endentry
+    \entry{python37}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://www.python.org/downloads/release/python-370
+      \endverb
     \endentry
   \endsortlist
 \endrefsection

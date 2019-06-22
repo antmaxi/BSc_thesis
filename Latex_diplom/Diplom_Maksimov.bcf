@@ -3156,19 +3156,28 @@
     <bcf:citekey order="10">March-Vila2017</bcf:citekey>
     <bcf:citekey order="11">Ehrt2016</bcf:citekey>
     <bcf:citekey order="12">Ehrt2016</bcf:citekey>
-    <bcf:citekey order="13">Cabrera</bcf:citekey>
-    <bcf:citekey order="14">Brylinski</bcf:citekey>
-    <bcf:citekey order="15">Govindaraj2018</bcf:citekey>
-    <bcf:citekey order="16">Chartier2017</bcf:citekey>
-    <bcf:citekey order="17">Levitt1998</bcf:citekey>
-    <bcf:citekey order="18">Cereto-Massague2015</bcf:citekey>
-    <bcf:citekey order="19">Chartier2015</bcf:citekey>
-    <bcf:citekey order="20">Ehrt2016</bcf:citekey>
-    <bcf:citekey order="21">Gaudreault2015</bcf:citekey>
-    <bcf:citekey order="21">Laskowski1995</bcf:citekey>
-    <bcf:citekey order="22">Bron1973</bcf:citekey>
-    <bcf:citekey order="22">Tomita2006</bcf:citekey>
-    <bcf:citekey order="23">Chartier2015</bcf:citekey>
+    <bcf:citekey order="13">Chartier2017</bcf:citekey>
+    <bcf:citekey order="14">drugbank</bcf:citekey>
+    <bcf:citekey order="15">uniprot</bcf:citekey>
+    <bcf:citekey order="16">pdb</bcf:citekey>
+    <bcf:citekey order="17">pubchem</bcf:citekey>
+    <bcf:citekey order="18">Jaccard1901</bcf:citekey>
+    <bcf:citekey order="19">biopython</bcf:citekey>
+    <bcf:citekey order="20">TM</bcf:citekey>
+    <bcf:citekey order="21">Lathrop1994</bcf:citekey>
+    <bcf:citekey order="22">Levitt1998</bcf:citekey>
+    <bcf:citekey order="23">Cereto-Massague2015</bcf:citekey>
+    <bcf:citekey order="24">rdkit</bcf:citekey>
+    <bcf:citekey order="25">openbabel</bcf:citekey>
+    <bcf:citekey order="26">isomif</bcf:citekey>
+    <bcf:citekey order="26">Chartier2015</bcf:citekey>
+    <bcf:citekey order="27">Ehrt2016</bcf:citekey>
+    <bcf:citekey order="28">Gaudreault2015</bcf:citekey>
+    <bcf:citekey order="28">Laskowski1995</bcf:citekey>
+    <bcf:citekey order="29">Bron1973</bcf:citekey>
+    <bcf:citekey order="29">Tomita2006</bcf:citekey>
+    <bcf:citekey order="30">Chartier2015</bcf:citekey>
+    <bcf:citekey order="31">python37</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="none/global" type="entry" sortscheme="none" sortnamekeyscheme="global">
   <bcf:sorting>
