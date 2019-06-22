@@ -1,52 +1,18 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: Diplom_Maksimov.aux
-The style file: unsrt.bst
-Database file #1: Diplom_lit.bib
-Warning--I'm ignoring DOPEShen2006's extra "note" field
---line 626 of file Diplom_lit.bib
-Warning--I'm ignoring DOPEShen2006's extra "note" field
---line 627 of file Diplom_lit.bib
-Warning--I didn't find a database entry for "SKOLNICK20151163"
-You've used 44 entries,
-            1791 wiz_defined-function locations,
-            791 strings with 12746 characters,
-and the built_in function-call counts, 11871 in all, are:
-= -- 1068
-> -- 541
-< -- 6
-+ -- 196
-- -- 152
-* -- 1009
-:= -- 1873
-add.period$ -- 144
-call.type$ -- 44
-change.case$ -- 44
-chr.to.int$ -- 0
-cite$ -- 44
-duplicate$ -- 450
-empty$ -- 1121
-format.name$ -- 152
-if$ -- 2615
-int.to.chr$ -- 0
-int.to.str$ -- 44
-missing$ -- 44
-newline$ -- 231
-num.names$ -- 44
-pop$ -- 54
-preamble$ -- 1
-purify$ -- 0
-quote$ -- 0
-skip$ -- 186
-stack$ -- 0
-substring$ -- 1054
-swap$ -- 84
-text.length$ -- 6
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 110
-width$ -- 46
-write$ -- 508
-(There were 3 warnings)
+[0] Config.pm:340> INFO - This is Biber 2.4
+[1] Config.pm:343> INFO - Logfile is 'Diplom_Maksimov.blg'
+[113] biber:287> INFO - === Сб июн 22, 2019, 15:16:30
+[816] Biber.pm:348> INFO - Reading 'Diplom_Maksimov.bcf'
+[1607] Biber.pm:742> INFO - Found 19 citekeys in bib section 0
+[1639] Biber.pm:3151> INFO - Processing section 0
+[1766] Biber.pm:3308> INFO - Looking for bibtex format file 'cite/Literature.bib' for section 0
+[3262] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
+[4193] bibtex.pm:974> INFO - Found BibTeX data source 'cite/Literature.bib'
+[4454] Utils.pm:147> WARN - ISBN '0022-2623' in entry 'Anighoro2014' is invalid - run biber with '--validate_datamodel' for details.
+[4962] Utils.pm:147> WARN - ISBN '1663-9812' in entry 'March-Vila2017' is invalid - run biber with '--validate_datamodel' for details.
+[5238] Utils.pm:147> WARN - ISBN '20506511 (Electronic)' in entry 'Chartier2017' is invalid - run biber with '--validate_datamodel' for details.
+[5933] UCollate.pm:65> INFO - Overriding locale 'ru-RU' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[5934] UCollate.pm:65> INFO - Overriding locale 'ru-RU' defaults 'variable = shifted' with 'variable = non-ignorable'
+[5934] Biber.pm:3028> INFO - Sorting list 'none/global' of type 'entry' with scheme 'none' and locale 'ru-RU'
+[6010] bbl.pm:519> INFO - Writing 'Diplom_Maksimov.bbl' with encoding 'UTF-8'
+[6508] bbl.pm:615> INFO - Output to Diplom_Maksimov.bbl
+[6509] Biber.pm:109> INFO - WARNINGS: 3
