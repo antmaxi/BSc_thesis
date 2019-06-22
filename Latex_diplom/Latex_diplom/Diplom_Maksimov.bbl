@@ -1,0 +1,885 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{none/global}
+    \entry{Anighoro2014}{article}{}
+      \name{author}{3}{}{%
+        {{hash=fb55bd2b5c34c635ef499e0f2e1cecbd}{%
+           family={Anighoro},
+           family_i={A\bibinitperiod},
+           given={Andrew},
+           given_i={A\bibinitperiod}}}%
+        {{hash=b88a4b64f8c7a8daff3c06310312efc3}{%
+           family={Bajorath},
+           family_i={B\bibinitperiod},
+           given={J??rgen},
+           given_i={J\bibinitperiod}}}%
+        {{hash=3827c9f08f612b9b1d0866c697add4a6}{%
+           family={Rastelli},
+           family_i={R\bibinitperiod},
+           given={Giulio},
+           given_i={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{22e219181fc9e46a092f4962b337310b}
+      \strng{fullhash}{22e219181fc9e46a092f4962b337310b}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{At present, the legendary magic bullet, i.e., a drug with high potency and selectivity toward a specific biological target, shares the spotlight with an emerging and alternative polypharmacology approach. Polypharmacology suggests that more effective drugs can be developed by specifically modulating multiple targets. It is generally thought that complex diseases such as cancer and central nervous system diseases may require complex therapeutic approaches. In this respect, a drug that “hits” multiple sensitive nodes belonging to a network of interacting targets offers the potential for higher efficacy and may limit drawbacks generally arising from the use of a single-target drug or a combination of multiple drugs. In this review, we will compare advantages and disadvantages of multitarget versus combination therapies, discuss potential drug promiscuity arising from off-target effects, comment on drug repurposing, and introduce approaches to the computational design of multitarget drugs.}
+      \field{isbn}{0022-2623}
+      \field{issn}{15204804}
+      \field{journaltitle}{Journal of Medicinal Chemistry}
+      \field{title}{{Polypharmacology: Challenges and opportunities in drug discovery}}
+      \field{year}{2014}
+      \field{number}{19}
+      \range{number}{1}
+      \field{pages}{7874\bibrangedash 7887}
+      \range{pages}{14}
+      \field{volume}{57}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1021/jm5006463
+      \endverb
+      \verb{file}
+      \verb :home/anton/Documents/Lit{\_}review/Papers/Polypharmacology/Polypharma.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Skolnick2015}{article}{useauthor=false}
+      \name{author}{5}{}{%
+        {{hash=582699a6542a10636b5b44c9b0ae1a58}{%
+           family={Skolnick},
+           family_i={S\bibinitperiod},
+           given={Jeffrey},
+           given_i={J\bibinitperiod}}}%
+        {{hash=a3c715197719ca1486270287a4ebebd5}{%
+           family={Gao},
+           family_i={G\bibinitperiod},
+           given={Mu},
+           given_i={M\bibinitperiod}}}%
+        {{hash=32b724aac9cf1ba7e73e7fbb0fda1b1a}{%
+           family={Roy},
+           family_i={R\bibinitperiod},
+           given={Ambrish},
+           given_i={A\bibinitperiod}}}%
+        {{hash=3c91ffee73a603dcc430822148b93fbf}{%
+           family={Srinivasan},
+           family_i={S\bibinitperiod},
+           given={Bharath},
+           given_i={B\bibinitperiod}}}%
+        {{hash=df8e91a61dfc6515a464839aaba565ce}{%
+           family={Zhou},
+           family_i={Z\bibinitperiod},
+           given={Hongyi},
+           given_i={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier {BV}}%
+      }
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioorganic {\&} Medicinal Chemistry Letters}
+      \field{month}{03}
+      \field{title}{Implications of the small number of distinct ligand binding pockets in proteins for drug discovery, evolution and biochemical function}
+      \field{year}{2015}
+      \field{number}{6}
+      \range{number}{1}
+      \field{pages}{1163\bibrangedash 1170}
+      \range{pages}{8}
+      \field{volume}{25}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/j.bmcl.2015.01.059
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.bmcl.2015.01.059
+      \endverb
+    \endentry
+    \entry{Chaudhari}{article}{useauthor=false}
+      \true{moreauthor}
+      \name{author}{1}{}{%
+        {{hash=d3963c34ebe33b244acbdb0b35b2c60d}{%
+           family={Chaudhari},
+           family_i={C\bibinitperiod},
+           given={Rajan},
+           given_i={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Expert Opinion on Drug Discovery}
+      \field{note}{PMID: 28067061}
+      \field{title}{Computational polypharmacology: a new paradigm for drug discovery}
+      \field{year}{2017}
+      \field{number}{3}
+      \range{number}{1}
+      \field{pages}{279\bibrangedash 291}
+      \range{pages}{13}
+      \field{volume}{12}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1080/17460441.2017.1280024
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1080/17460441.2017.1280024
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/17460441.2017.1280024
+      \endverb
+    \endentry
+    \entry{Loving}{article}{}
+      \name{author}{3}{}{%
+        {{hash=b33517b2a0d511b640172bdde02b81ef}{%
+           family={Loving},
+           family_i={L\bibinitperiod},
+           given={Kathryn\bibnamedelima A.},
+           given_i={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=8d15464809881482e43f43697b02e415}{%
+           family={Lin},
+           family_i={L\bibinitperiod},
+           given={Andy},
+           given_i={A\bibinitperiod}}}%
+        {{hash=cdb61cfeca9905ef9bef725bca14d967}{%
+           family={Cheng},
+           family_i={C\bibinitperiod},
+           given={Alan\bibnamedelima C.},
+           given_i={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Public Library of Science}%
+      }
+      \strng{namehash}{67b5d75917d1d6261e5480550e9127a2}
+      \strng{fullhash}{67b5d75917d1d6261e5480550e9127a2}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Author Summary Advances reported over the last few years and the increasing availability of protein crystal structure data have greatly improved structure-based druggability approaches. These algorithms predict our ability to discover small molecule drugs for protein targets and can help in identifying promising new biological targets for small molecule drug discovery. However, in practice, nearly all druggability estimation methods are applied to protein crystal structures as rigid proteins, with protein flexibility often not directly addressed. The increasing interest in finding small molecule drugs to protein-protein interfaces makes this issue particularly acute since these interfaces tend to have substantial flexibility compared to traditional enzyme targets. Here, we apply an approach that accounts for light protein backbone movement and protein side-chain flexibility in protein binding sites. We present the results of applying this method to all publicly available mammalian protein crystal structures.}
+      \field{journaltitle}{PLOS Computational Biology}
+      \field{month}{07}
+      \field{title}{Structure-Based Druggability Assessment of the Mammalian Structural Proteome with Inclusion of Light Protein Flexibility}
+      \field{year}{2014}
+      \field{number}{7}
+      \range{number}{1}
+      \field{pages}{1\bibrangedash 13}
+      \range{pages}{13}
+      \field{volume}{10}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1371/journal.pcbi.1003741
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1371/journal.pcbi.1003741
+      \endverb
+    \endentry
+    \entry{Rognan2010}{article}{}
+      \name{author}{1}{}{%
+        {{hash=51b7de6bcc9322f2bda8e27463bd5af2}{%
+           family={Rognan},
+           family_i={R\bibinitperiod},
+           given={Didier},
+           given_i={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{51b7de6bcc9322f2bda8e27463bd5af2}
+      \strng{fullhash}{51b7de6bcc9322f2bda8e27463bd5af2}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Molecular Informatics}
+      \field{month}{03}
+      \field{title}{Structure-Based Approaches to Target Fishing and Ligand Profiling}
+      \field{year}{2010}
+      \field{number}{3}
+      \range{number}{1}
+      \field{pages}{176\bibrangedash 187}
+      \range{pages}{12}
+      \field{volume}{29}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1002/minf.200900081
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1002/minf.200900081
+      \endverb
+    \endentry
+    \entry{Hall2015}{article}{useauthor=false}
+      \name{author}{4}{}{%
+        {{hash=3c7cfc09b4fd354d1048ab42b61442f8}{%
+           family={Hall},
+           family_i={H\bibinitperiod},
+           given={David\bibnamedelima R.},
+           given_i={D\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=de78114d71c50c7391cf9751dba82ec3}{%
+           family={Kozakov},
+           family_i={K\bibinitperiod},
+           given={Dima},
+           given_i={D\bibinitperiod}}}%
+        {{hash=319c170e26b53c188a7f106c23aea8a2}{%
+           family={Whitty},
+           family_i={W\bibinitperiod},
+           given={Adrian},
+           given_i={A\bibinitperiod}}}%
+        {{hash=7d55923c8a8630e19d528f72dbfba8b4}{%
+           family={Vajda},
+           family_i={V\bibinitperiod},
+           given={Sandor},
+           given_i={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{issn}{0165-6147}
+      \field{journaltitle}{Trends in Pharmacological Sciences}
+      \field{month}{11}
+      \field{title}{Lessons from Hot Spot Analysis for Fragment-Based Drug Discovery}
+      \field{year}{2015}
+      \field{number}{11}
+      \range{number}{1}
+      \field{pages}{724\bibrangedash 736}
+      \range{pages}{13}
+      \field{volume}{36}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/j.tips.2015.08.003
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.tips.2015.08.003
+      \endverb
+    \endentry
+    \entry{March-Vila2017}{article}{useauthor=false}
+      \name{author}{7}{}{%
+        {{hash=7963619c0cdb2402b992bdef508c72e8}{%
+           family={March-Vila},
+           family_i={M\bibinithyphendelim V\bibinitperiod},
+           given={Eric},
+           given_i={E\bibinitperiod}}}%
+        {{hash=a6c9d5817be9ac35ed791e6cb8d0b6da}{%
+           family={Pinzi},
+           family_i={P\bibinitperiod},
+           given={Luca},
+           given_i={L\bibinitperiod}}}%
+        {{hash=11544f4d2d820c58dcdfae7b268bd014}{%
+           family={Sturm},
+           family_i={S\bibinitperiod},
+           given={Noé},
+           given_i={N\bibinitperiod}}}%
+        {{hash=c1a4d6b5926b8953d63d3f42e34221cb}{%
+           family={Tinivella},
+           family_i={T\bibinitperiod},
+           given={Annachiara},
+           given_i={A\bibinitperiod}}}%
+        {{hash=07fc5197917d83cd3df96202400b36bc}{%
+           family={Engkvist},
+           family_i={E\bibinitperiod},
+           given={Ola},
+           given_i={O\bibinitperiod}}}%
+        {{hash=52c3e5a8c2ccdc7c6f2b529db69f6872}{%
+           family={Chen},
+           family_i={C\bibinitperiod},
+           given={Hongming},
+           given_i={H\bibinitperiod}}}%
+        {{hash=3827c9f08f612b9b1d0866c697add4a6}{%
+           family={Rastelli},
+           family_i={R\bibinitperiod},
+           given={Giulio},
+           given_i={G\bibinitperiod}}}%
+      }
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Drug repurposing has become an important branch of drug discovery. Several computational approaches that help to uncover new repurposing opportunities and aid the discovery process have been put forward, or adapted from previous applications. A number of successful examples are now available. Overall, future developments will greatly benefit from integration of different methods, approaches and disciplines. Steps forward in this direction are expected to help to clarify, and therefore to rationally predict, new drug-target, target-disease, and ultimately drug-disease associations.}
+      \field{eprinttype}{arXiv}
+      \field{isbn}{1663-9812}
+      \field{issn}{16639812}
+      \field{journaltitle}{Frontiers in Pharmacology}
+      \field{title}{{On the integration of in silico drug design methods for drug repurposing}}
+      \field{year}{2017}
+      \field{number}{MAY}
+      \range{number}{-1}
+      \field{pages}{1\bibrangedash 7}
+      \range{pages}{7}
+      \field{volume}{8}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.3389/fphar.2017.00298
+      \endverb
+      \verb{eprint}
+      \verb arXiv:1011.1669v3
+      \endverb
+      \verb{file}
+      \verb :home/anton/Documents/Lit{\_}review/Papers/Off-target/fphar-08-00298.pdf:pdf
+      \endverb
+      \keyw{Chemogenomics,Drug discovery,Drug repurposing,Ligand-based drug design,Machine learning,Molecular modeling,Structure-based drug design,Transcriptomics}
+    \endentry
+    \entry{Ehrt2016}{article}{}
+      \name{author}{3}{}{%
+        {{hash=b3721c7a2f0ba82b0bb380ee5ba8c6ec}{%
+           family={Ehrt},
+           family_i={E\bibinitperiod},
+           given={Christiane},
+           given_i={C\bibinitperiod}}}%
+        {{hash=13cb0d6ec229abdaeb71286bbed135d4}{%
+           family={Brinkjost},
+           family_i={B\bibinitperiod},
+           given={Tobias},
+           given_i={T\bibinitperiod}}}%
+        {{hash=b5b5a936a94276ca6b1e7069ae4ce9ef}{%
+           family={Koch},
+           family_i={K\bibinitperiod},
+           given={Oliver},
+           given_i={O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Chemical Society}%
+      }
+      \strng{namehash}{c4ab71ebefe9fc3c506a06917465a4cc}
+      \strng{fullhash}{c4ab71ebefe9fc3c506a06917465a4cc}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-2623}
+      \field{journaltitle}{Journal of Medicinal Chemistry}
+      \field{month}{05}
+      \field{title}{Impact of Binding Site Comparisons on Medicinal Chemistry and Rational Molecular Design}
+      \field{year}{2016}
+      \field{number}{9}
+      \range{number}{1}
+      \field{pages}{4121\bibrangedash 4151}
+      \range{pages}{31}
+      \field{volume}{59}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1021/acs.jmedchem.6b00078
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1021/acs.jmedchem.6b00078
+      \endverb
+    \endentry
+    \entry{Chartier2017}{article}{useauthor=false}
+      \name{author}{4}{}{%
+        {{hash=4ca62937d0e37842f3f5f24d3c81f502}{%
+           family={Chartier},
+           family_i={C\bibinitperiod},
+           given={Matthieu},
+           given_i={M\bibinitperiod}}}%
+        {{hash=26e99a61bd37d30f7c440e7d57b9642c}{%
+           family={Morency},
+           family_i={M\bibinitperiod},
+           given={Louis\bibnamedelima Philippe},
+           given_i={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=d6044df4675a2a35c0a4d7c9f3a5069c}{%
+           family={Zylber},
+           family_i={Z\bibinitperiod},
+           given={María\bibnamedelima Inés},
+           given_i={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=692e8c56a024ae60955fe8a1735b4199}{%
+           family={Najmanovich},
+           family_i={N\bibinitperiod},
+           given={Rafael\bibnamedelima J.},
+           given_i={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {BMC Pharmacology}%
+        {Toxicology}%
+      }
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{abstract}{BACKGROUND Promiscuity in molecular interactions between small-molecules, including drugs, and proteins is widespread. Such unintended interactions can be exploited to suggest drug repurposing possibilities as well as to identify potential molecular mechanisms responsible for observed side-effects. METHODS We perform a large-scale analysis to detect binding-site molecular interaction field similarities between the binding-sites of the primary target of 400 drugs against a dataset of 14082 cavities within 7895 different proteins representing a non-redundant dataset of all proteins with known structure. Statistically-significant cases with high levels of similarities represent potential cases where the drugs that bind the original target may in principle bind the suggested off-target. Such cases are further analysed with docking simulations to verify if indeed the drug could, in principle, bind the off-target. Diverse sources of data are integrated to associated potential cross-reactivity targets with side-effects. RESULTS We observe that promiscuous binding-sites tend to display higher levels of hydrophobic and aromatic similarities. Focusing on the most statistically significant similarities (Z-score ≥ 3.0) and corroborating docking results (RMSD {<} 2.0 Å), we find 2923 cases involving 140 unique drugs and 1216 unique potential cross-reactivity protein targets. We highlight a few cases with a potential for drug repurposing (acetazolamide as a chorismate pyruvate lyase inhibitor, raloxifene as a bacterial quorum sensing inhibitor) as well as to explain the side-effects of zanamivir and captopril. A web-interface permits to explore the detected similarities for each of the 400 binding-sites of the primary drug targets and visualise them for the most statistically significant cases. CONCLUSIONS The detection of molecular interaction field similarities provide the opportunity to suggest drug repurposing opportunities as well as to identify potential molecular mechanisms responsible for side-effects. All methods utilized are freely available and can be readily applied to new query binding-sites. All data is freely available and represents an invaluable source to identify further candidates for repurposing and suggest potential mechanisms responsible for side-effects.}
+      \field{isbn}{20506511 (Electronic)}
+      \field{issn}{20506511}
+      \field{journaltitle}{BMC Pharmacology and Toxicology}
+      \field{title}{{Large-scale detection of drug off-targets: Hypotheses for drug repurposing and understanding side-effects}}
+      \field{year}{2017}
+      \field{number}{1}
+      \range{number}{1}
+      \field{pages}{1\bibrangedash 16}
+      \range{pages}{16}
+      \field{volume}{18}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1186/s40360-017-0128-7
+      \endverb
+      \verb{file}
+      \verb :media/anton/b8150e49-6ff0-467b-ad66-40347e8bb188/anton/BACHELOR/Articles/Large-scale detection of drug off-targets$\backslash$: hypotheses for drug repurposing and understanding side-effects:
+      \endverb
+      \keyw{Binding-site similarities,Cross-reactivity,Drug repurposing,Large-scale analysis,Molecularinteraction field similarities,Promiscuity,Side-effects}
+    \endentry
+    \entry{drugbank}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://www.drugbank.ca
+      \endverb
+    \endentry
+    \entry{uniprot}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://www.uniprot.org
+      \endverb
+    \endentry
+    \entry{pdb}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://www.rcsb.org
+      \endverb
+    \endentry
+    \entry{Jaccard1901}{article}{}
+      \name{author}{1}{}{%
+        {{hash=87a064a14b90f16946db798a8b99a5d0}{%
+           family={Jaccard},
+           family_i={J\bibinitperiod},
+           given={P.},
+           given_i={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{87a064a14b90f16946db798a8b99a5d0}
+      \strng{fullhash}{87a064a14b90f16946db798a8b99a5d0}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bulletin de la Société Vaudoise des Sciences Naturelles}
+      \field{title}{Comparative de la distribuition florale dans une portion des Alpes et des Jura}
+      \field{year}{1901}
+      \field{number}{7}
+      \range{number}{1}
+      \field{pages}{547\bibrangedash 579}
+      \range{pages}{33}
+    \endentry
+    \entry{biopython}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://biopython.org
+      \endverb
+    \endentry
+    \entry{TM}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://zhanglab.ccmb.med.umich.edu/TM-align
+      \endverb
+    \endentry
+    \entry{TMalign}{article}{}
+      \name{author}{2}{}{%
+        {{hash=e760d38078aff4a5b24c867aa5178c26}{%
+           family={Zhang},
+           family_i={Z\bibinitperiod},
+           given={Yang},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=582699a6542a10636b5b44c9b0ae1a58}{%
+           family={Skolnick},
+           family_i={S\bibinitperiod},
+           given={Jeffrey},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{96802fdc869c283d84dc201fb545fb9b}
+      \strng{fullhash}{96802fdc869c283d84dc201fb545fb9b}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0305-1048}
+      \field{journaltitle}{Nucleic Acids Research}
+      \field{month}{01}
+      \field{title}{TM-align: a protein structure alignment algorithm based on the TM-score}
+      \field{year}{2005}
+      \field{number}{7}
+      \range{number}{1}
+      \field{pages}{2302\bibrangedash 2309}
+      \range{pages}{8}
+      \field{volume}{33}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1093/nar/gki524
+      \endverb
+      \verb{eprint}
+      \verb http://oup.prod.sis.lan/nar/article-pdf/33/7/2302/7127128/gki524.pdf
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/nar/gki524
+      \endverb
+    \endentry
+    \entry{Lathrop1994}{article}{}
+      \name{author}{1}{}{%
+        {{hash=205bc26913ad40c3586cb065d86ef716}{%
+           family={Lathrop},
+           family_i={L\bibinitperiod},
+           given={Richard\bibnamedelima H.},
+           given_i={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press ({OUP})}%
+      }
+      \strng{namehash}{205bc26913ad40c3586cb065d86ef716}
+      \strng{fullhash}{205bc26913ad40c3586cb065d86ef716}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{"Protein Engineering, Design and Selection"}
+      \field{title}{The protein threading problem with sequence amino acid interaction preferences is {NP}-complete}
+      \field{year}{1994}
+      \field{number}{9}
+      \range{number}{1}
+      \field{pages}{1059\bibrangedash 1068}
+      \range{pages}{10}
+      \field{volume}{7}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1093/protein/7.9.1059
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/protein/7.9.1059
+      \endverb
+    \endentry
+    \entry{Levitt1998}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1ddf5deb5801f036e56c54c026f98dd3}{%
+           family={Levitt},
+           family_i={L\bibinitperiod},
+           given={M.},
+           given_i={M\bibinitperiod}}}%
+        {{hash=45d52c29655d9befb0fd816013eda062}{%
+           family={Gerstein},
+           family_i={G\bibinitperiod},
+           given={M.},
+           given_i={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Proceedings of the National Academy of Sciences}%
+      }
+      \strng{namehash}{cd2d7e2c35fee7b029ff41eac6de670d}
+      \strng{fullhash}{cd2d7e2c35fee7b029ff41eac6de670d}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{month}{05}
+      \field{title}{A unified statistical framework for sequence comparison and structure comparison}
+      \field{year}{1998}
+      \field{number}{11}
+      \range{number}{1}
+      \field{pages}{5913\bibrangedash 5920}
+      \range{pages}{8}
+      \field{volume}{95}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1073/pnas.95.11.5913
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1073/pnas.95.11.5913
+      \endverb
+    \endentry
+    \entry{Cereto-Massague2015}{article}{useauthor=false}
+      \name{author}{6}{}{%
+        {{hash=e991737e16c245c19cfdb01d91ad529a}{%
+           family={Cereto-Massagué},
+           family_i={C\bibinithyphendelim M\bibinitperiod},
+           given={Adrià},
+           given_i={A\bibinitperiod}}}%
+        {{hash=ae2b66c6a2e57d548fdc711032feb396}{%
+           family={Ojeda},
+           family_i={O\bibinitperiod},
+           given={María\bibnamedelima José},
+           given_i={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=3f86ce59eb9c909b3bef3aea62b755e9}{%
+           family={Valls},
+           family_i={V\bibinitperiod},
+           given={Cristina},
+           given_i={C\bibinitperiod}}}%
+        {{hash=dee9b636f222f84929a1cee734dec5cb}{%
+           family={Mulero},
+           family_i={M\bibinitperiod},
+           given={Miquel},
+           given_i={M\bibinitperiod}}}%
+        {{hash=524d56df15e04cf998359487c517e40e}{%
+           family={Garcia-Vallvé},
+           family_i={G\bibinithyphendelim V\bibinitperiod},
+           given={Santiago},
+           given_i={S\bibinitperiod}}}%
+        {{hash=f5fee8e2804a181170b73d8973cc514b}{%
+           family={Pujadas},
+           family_i={P\bibinitperiod},
+           given={Gerard},
+           given_i={G\bibinitperiod}}}%
+      }
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Molecular fingerprints have been used for a long time now in drug discovery and virtual screening. Their ease of use (requiring little to no configuration) and the speed at which substructure and similarity searches can be performed with them - paired with a virtual screening performance similar to other more complex methods - is the reason for their popularity. However, there are many types of fingerprints, each representing a different aspect of the molecule, which can greatly affect search performance. This review focuses on commonly used fingerprint algorithms, their usage in virtual screening, and the software packages and online tools that provide these algorithms.}
+      \field{issn}{10959130}
+      \field{journaltitle}{Methods}
+      \field{title}{{Molecular fingerprint similarity search in virtual screening}}
+      \field{year}{2015}
+      \field{number}{C}
+      \range{number}{1}
+      \field{pages}{58\bibrangedash 63}
+      \range{pages}{6}
+      \field{volume}{71}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/j.ymeth.2014.08.005
+      \endverb
+      \verb{file}
+      \verb :media/anton/b8150e49-6ff0-467b-ad66-40347e8bb188/anton/BACHELOR/Articles/ligands/2015{\_}Molecular fingerprint similarity search in virtual screening.pdf:pdf
+      \endverb
+      \keyw{Comparison,Data fusion,Fingerprints,Similarity search,Virtual screening}
+    \endentry
+    \entry{rdkit}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb http://www.rdkit.org/docs/index.html
+      \endverb
+    \endentry
+    \entry{openbabel}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb http://openbabel.org/wiki/Main_Page
+      \endverb
+    \endentry
+    \entry{isomif}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://github.com/mtthchrtr/IsoMif
+      \endverb
+    \endentry
+    \entry{Chartier2015}{article}{}
+      \name{author}{2}{}{%
+        {{hash=4ca62937d0e37842f3f5f24d3c81f502}{%
+           family={Chartier},
+           family_i={C\bibinitperiod},
+           given={Matthieu},
+           given_i={M\bibinitperiod}}}%
+        {{hash=06565adedb9b6018811aec68d69b70cc}{%
+           family={Najmanovich},
+           family_i={N\bibinitperiod},
+           given={Rafael},
+           given_i={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{5059cf90480077eb62c71acb63219ae0}
+      \strng{fullhash}{5059cf90480077eb62c71acb63219ae0}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{? 2015 American Chemical Society.(Figure Presented) Protein binding-site similarity detection methods can be used to predict protein function and understand molecular recognition, as a tool in drug design for drug repurposing and polypharmacology, and for the prediction of the molecular determinants of drug toxicity. Here, we present IsoMIF, a method able to identify binding site molecular interaction field similarities across protein families. IsoMIF utilizes six chemical probes and the detection of subgraph isomorphisms to identify geometrically and chemically equivalent sections of protein cavity pairs. The method is validated using six distinct data sets, four of those previously used in the validation of other methods. The mean area under the receiver operator curve (AUC) obtained across data sets for IsoMIF is higher than those of other methods. Furthermore, while IsoMIF obtains consistently high AUC values across data sets, other methods perform more erratically across data sets. IsoMIF can be used to predict function from structure, to detect potential cross-reactivity or polypharmacology targets, and to help suggest bioisosteric replacements to known binding molecules. Given that IsoMIF detects spatial patterns of molecular interaction field similarities, its predictions are directly related to pharmacophores and may be readily translated into modeling decisions in structure-based drug design. IsoMIF may in principle detect similar binding sites with distinct amino acid arrangements that lead to equivalent interactions within the cavity. The source code to calculate and visualize MIFs and MIF similarities are freely available.}
+      \field{issn}{15205142}
+      \field{journaltitle}{Journal of Chemical Information and Modeling}
+      \field{title}{{Detection of Binding Site Molecular Interaction Field Similarities}}
+      \field{year}{2015}
+      \field{number}{8}
+      \range{number}{1}
+      \field{pages}{1600\bibrangedash 1615}
+      \range{pages}{16}
+      \field{volume}{55}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1021/acs.jcim.5b00333
+      \endverb
+      \verb{file}
+      \verb :media/anton/b8150e49-6ff0-467b-ad66-40347e8bb188/anton/BACHELOR/Articles/Detection of Binding Site Molecular Interaction Field Similarities.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Gaudreault2015}{article}{}
+      \name{author}{3}{}{%
+        {{hash=21470dfc19700a8d5425e1c4cccaed90}{%
+           family={Gaudreault},
+           family_i={G\bibinitperiod},
+           given={Francis},
+           given_i={F\bibinitperiod}}}%
+        {{hash=2b23af9d24a98a5912d3b7c941b08ed7}{%
+           family={Morency},
+           family_i={M\bibinitperiod},
+           given={Louis-Philippe},
+           given_i={L\bibinithyphendelim P\bibinitperiod}}}%
+        {{hash=692e8c56a024ae60955fe8a1735b4199}{%
+           family={Najmanovich},
+           family_i={N\bibinitperiod},
+           given={Rafael\bibnamedelima J.},
+           given_i={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press ({OUP})}%
+      }
+      \strng{namehash}{1d860533023f81161b65a17d9e216dd1}
+      \strng{fullhash}{1d860533023f81161b65a17d9e216dd1}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioinformatics}
+      \field{month}{08}
+      \field{title}{{NRGsuite}: a {PyMOL} plugin to perform docking simulations in real time using {FlexAID}}
+      \field{year}{2015}
+      \field{pages}{btv458}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1093/bioinformatics/btv458
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/bioinformatics/btv458
+      \endverb
+    \endentry
+    \entry{Laskowski1995}{article}{}
+      \name{author}{1}{}{%
+        {{hash=cfd46a4337125bd8ab6b6f0fbde15caa}{%
+           family={Laskowski},
+           family_i={L\bibinitperiod},
+           given={Roman\bibnamedelima A.},
+           given_i={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier {BV}}%
+      }
+      \strng{namehash}{cfd46a4337125bd8ab6b6f0fbde15caa}
+      \strng{fullhash}{cfd46a4337125bd8ab6b6f0fbde15caa}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Molecular Graphics}
+      \field{month}{10}
+      \field{title}{{SURFNET}: A program for visualizing molecular surfaces, cavities, and intermolecular interactions}
+      \field{year}{1995}
+      \field{number}{5}
+      \range{number}{1}
+      \field{pages}{323\bibrangedash 330}
+      \range{pages}{8}
+      \field{volume}{13}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/0263-7855(95)00073-9
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/0263-7855(95)00073-9
+      \endverb
+    \endentry
+    \entry{Bron1973}{article}{}
+      \name{author}{2}{}{%
+        {{hash=67906f56136d29f4eadc88805c6ea2bd}{%
+           family={Bron},
+           family_i={B\bibinitperiod},
+           given={Coen},
+           given_i={C\bibinitperiod}}}%
+        {{hash=240d87ff9e7421d1f7cf0418e24ee129}{%
+           family={Kerbosch},
+           family_i={K\bibinitperiod},
+           given={Joep},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{f2db0b28f66c0d2c91cb59e3cbf792ba}
+      \strng{fullhash}{f2db0b28f66c0d2c91cb59e3cbf792ba}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A maximal complete subgraph (clique) is a complete subgraph that is not contained in any other complete subgraph.}
+      \field{issn}{00010782}
+      \field{journaltitle}{Communications of the ACM}
+      \field{title}{{Algorithm 457: finding all cliques of an undirected graph}}
+      \field{year}{1973}
+      \field{number}{9}
+      \range{number}{1}
+      \field{pages}{575\bibrangedash 577}
+      \range{pages}{3}
+      \field{volume}{16}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1145/362342.362367
+      \endverb
+      \verb{file}
+      \verb :media/anton/b8150e49-6ff0-467b-ad66-40347e8bb188/anton/BACHELOR/Articles/bron1973.pdf:pdf
+      \endverb
+      \keyw{and phrases,backtracking algorithm,branch and bound technique,cliques,clusters,maximal complete subgraphs}
+    \endentry
+    \entry{Tomita2006}{article}{}
+      \name{author}{3}{}{%
+        {{hash=75dface36e581485df6983f3ba54b652}{%
+           family={Tomita},
+           family_i={T\bibinitperiod},
+           given={Etsuji},
+           given_i={E\bibinitperiod}}}%
+        {{hash=c174e85f763efa3b6f9d12f3403ea238}{%
+           family={Tanaka},
+           family_i={T\bibinitperiod},
+           given={Akira},
+           given_i={A\bibinitperiod}}}%
+        {{hash=059b78fad33c22740bdef19f5c6e2d0b}{%
+           family={Takahashi},
+           family_i={T\bibinitperiod},
+           given={Haruhisa},
+           given_i={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{13c5dcaffe94e99ce5bc6ed454221a4d}
+      \strng{fullhash}{13c5dcaffe94e99ce5bc6ed454221a4d}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present a depth-first search algorithm for generating all maximal cliques of an undirected graph, in which pruning methods are employed as in the Bron-Kerbosch algorithm. All the maximal cliques generated are output in a tree-like form. Subsequently, we prove that its worst-case time complexity is O (3n / 3) for an n-vertex graph. This is optimal as a function of n, since there exist up to 3n / 3 maximal cliques in an n-vertex graph. The algorithm is also demonstrated to run very fast in practice by computational experiments. {©} 2006 Elsevier B.V. All rights reserved.}
+      \field{issn}{03043975}
+      \field{journaltitle}{Theoretical Computer Science}
+      \field{title}{{The worst-case time complexity for generating all maximal cliques and computational experiments}}
+      \field{year}{2006}
+      \field{number}{1}
+      \range{number}{1}
+      \field{pages}{28\bibrangedash 42}
+      \range{pages}{15}
+      \field{volume}{363}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/j.tcs.2006.06.015
+      \endverb
+      \verb{file}
+      \verb :media/anton/b8150e49-6ff0-467b-ad66-40347e8bb188/anton/BACHELOR/Articles/Bron{\_}Kerbosh{\_}modified{\_}2006{\_}The worst-case time complexity for generating all maximal cliques and computational experiments.pdf:pdf
+      \endverb
+      \keyw{Computational experiments,Enumeration,Maximal cliques,Worst-case time complexity}
+    \endentry
+    \entry{python37}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://www.python.org/downloads/release/python-370
+      \endverb
+    \endentry
+  \endsortlist
+  \missing{pubchem}
+\endrefsection
+\endinput
+
