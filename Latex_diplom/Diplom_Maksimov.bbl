@@ -455,13 +455,6 @@
       \verb https://www.rcsb.org
       \endverb
     \endentry
-    \entry{pubchem}{online}{}
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
-      \verb{url}
-      \verb https://pubchem.ncbi.nlm.nih.gov
-      \endverb
-    \endentry
     \entry{Jaccard1901}{article}{}
       \name{author}{1}{}{%
         {{hash=87a064a14b90f16946db798a8b99a5d0}{%
@@ -496,6 +489,46 @@
       \field{sortinithash}{990108227b3316c02842d895999a0165}
       \verb{url}
       \verb https://zhanglab.ccmb.med.umich.edu/TM-align
+      \endverb
+    \endentry
+    \entry{TMalign}{article}{}
+      \name{author}{2}{}{%
+        {{hash=e760d38078aff4a5b24c867aa5178c26}{%
+           family={Zhang},
+           family_i={Z\bibinitperiod},
+           given={Yang},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=582699a6542a10636b5b44c9b0ae1a58}{%
+           family={Skolnick},
+           family_i={S\bibinitperiod},
+           given={Jeffrey},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{96802fdc869c283d84dc201fb545fb9b}
+      \strng{fullhash}{96802fdc869c283d84dc201fb545fb9b}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0305-1048}
+      \field{journaltitle}{Nucleic Acids Research}
+      \field{month}{01}
+      \field{title}{TM-align: a protein structure alignment algorithm based on the TM-score}
+      \field{year}{2005}
+      \field{number}{7}
+      \range{number}{1}
+      \field{pages}{2302\bibrangedash 2309}
+      \range{pages}{8}
+      \field{volume}{33}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1093/nar/gki524
+      \endverb
+      \verb{eprint}
+      \verb http://oup.prod.sis.lan/nar/article-pdf/33/7/2302/7127128/gki524.pdf
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/nar/gki524
       \endverb
     \endentry
     \entry{Lathrop1994}{article}{}
@@ -846,6 +879,7 @@
       \endverb
     \endentry
   \endsortlist
+  \missing{pubchem}
 \endrefsection
 \endinput
 

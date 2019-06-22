@@ -836,4 +836,8 @@ This chapter elaborates protein structure prediction using Rosetta. Double-blind
   url = {https://www.rcsb.org},
 }
 
+@Electronic{p,
+  url = {https://pubchem.ncbi.nlm.nih.gov},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

@@ -3164,20 +3164,23 @@
     <bcf:citekey order="18">Jaccard1901</bcf:citekey>
     <bcf:citekey order="19">biopython</bcf:citekey>
     <bcf:citekey order="20">TM</bcf:citekey>
+    <bcf:citekey order="20">TMalign</bcf:citekey>
     <bcf:citekey order="21">Lathrop1994</bcf:citekey>
     <bcf:citekey order="22">Levitt1998</bcf:citekey>
-    <bcf:citekey order="23">Cereto-Massague2015</bcf:citekey>
-    <bcf:citekey order="24">rdkit</bcf:citekey>
-    <bcf:citekey order="25">openbabel</bcf:citekey>
-    <bcf:citekey order="26">isomif</bcf:citekey>
-    <bcf:citekey order="26">Chartier2015</bcf:citekey>
-    <bcf:citekey order="27">Ehrt2016</bcf:citekey>
-    <bcf:citekey order="28">Gaudreault2015</bcf:citekey>
-    <bcf:citekey order="28">Laskowski1995</bcf:citekey>
-    <bcf:citekey order="29">Bron1973</bcf:citekey>
-    <bcf:citekey order="29">Tomita2006</bcf:citekey>
-    <bcf:citekey order="30">Chartier2015</bcf:citekey>
-    <bcf:citekey order="31">python37</bcf:citekey>
+    <bcf:citekey order="23">TMalign</bcf:citekey>
+    <bcf:citekey order="24">TMalign</bcf:citekey>
+    <bcf:citekey order="25">Cereto-Massague2015</bcf:citekey>
+    <bcf:citekey order="26">rdkit</bcf:citekey>
+    <bcf:citekey order="27">openbabel</bcf:citekey>
+    <bcf:citekey order="28">isomif</bcf:citekey>
+    <bcf:citekey order="28">Chartier2015</bcf:citekey>
+    <bcf:citekey order="29">Ehrt2016</bcf:citekey>
+    <bcf:citekey order="30">Gaudreault2015</bcf:citekey>
+    <bcf:citekey order="30">Laskowski1995</bcf:citekey>
+    <bcf:citekey order="31">Bron1973</bcf:citekey>
+    <bcf:citekey order="31">Tomita2006</bcf:citekey>
+    <bcf:citekey order="32">Chartier2015</bcf:citekey>
+    <bcf:citekey order="33">python37</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="none/global" type="entry" sortscheme="none" sortnamekeyscheme="global">
   <bcf:sorting>
