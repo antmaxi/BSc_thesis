@@ -602,6 +602,45 @@
       \verb https://doi.org/10.1073/pnas.95.11.5913
       \endverb
     \endentry
+    \entry{Xu2010}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5362fd73501cbce033bf4bf96f1dc0cf}{%
+           family={Xu},
+           family_i={X\bibinitperiod},
+           given={Jinrui},
+           given_i={J\bibinitperiod}}}%
+        {{hash=e760d38078aff4a5b24c867aa5178c26}{%
+           family={Zhang},
+           family_i={Z\bibinitperiod},
+           given={Yang},
+           given_i={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press ({OUP})}%
+      }
+      \strng{namehash}{406409b8cfd4d222daa14535dc264e83}
+      \strng{fullhash}{406409b8cfd4d222daa14535dc264e83}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioinformatics}
+      \field{month}{02}
+      \field{title}{How significant is a protein structure similarity with {TM}-score = 0.5?}
+      \field{year}{2010}
+      \field{number}{7}
+      \range{number}{1}
+      \field{pages}{889\bibrangedash 895}
+      \range{pages}{7}
+      \field{volume}{26}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1093/bioinformatics/btq066
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/bioinformatics/btq066
+      \endverb
+    \endentry
     \entry{Cereto-Massague2015}{article}{useauthor=false}
       \name{author}{6}{}{%
         {{hash=e991737e16c245c19cfdb01d91ad529a}{%

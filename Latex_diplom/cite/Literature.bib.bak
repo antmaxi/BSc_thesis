@@ -853,4 +853,15 @@ This chapter elaborates protein structure prediction using Rosetta. Double-blind
   url       = {https://doi.org/10.1093/nar/gkx1037},
 }
 
+@InCollection{Koch2019,
+  author    = {Oliver Koch and Christiane Ehrt and Tobias Brinkjost},
+  title     = {Binding Site Comparison {\textendash} Software and Applications},
+  booktitle = {Encyclopedia of Bioinformatics and Computational Biology},
+  publisher = {Elsevier},
+  year      = {2019},
+  pages     = {650--660},
+  doi       = {10.1016/b978-0-12-809633-8.20196-9},
+  url       = {https://doi.org/10.1016/b978-0-12-809633-8.20196-9},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

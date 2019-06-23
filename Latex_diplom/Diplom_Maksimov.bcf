@@ -3168,6 +3168,7 @@
     <bcf:citekey order="21">Lathrop1994</bcf:citekey>
     <bcf:citekey order="22">Levitt1998</bcf:citekey>
     <bcf:citekey order="23">TMalign</bcf:citekey>
+    <bcf:citekey order="23">Xu2010</bcf:citekey>
     <bcf:citekey order="24">TMalign</bcf:citekey>
     <bcf:citekey order="25">Cereto-Massague2015</bcf:citekey>
     <bcf:citekey order="26">rdkit</bcf:citekey>
@@ -3176,12 +3177,12 @@
     <bcf:citekey order="28">Chartier2015</bcf:citekey>
     <bcf:citekey order="29">Ehrt2016</bcf:citekey>
     <bcf:citekey order="30">Gaudreault2015</bcf:citekey>
-    <bcf:citekey order="30">Laskowski1995</bcf:citekey>
-    <bcf:citekey order="31">Bron1973</bcf:citekey>
-    <bcf:citekey order="31">Tomita2006</bcf:citekey>
-    <bcf:citekey order="32">Chartier2015</bcf:citekey>
-    <bcf:citekey order="33">python37</bcf:citekey>
-    <bcf:citekey order="34">Wishart2017</bcf:citekey>
+    <bcf:citekey order="31">Laskowski1995</bcf:citekey>
+    <bcf:citekey order="32">Bron1973</bcf:citekey>
+    <bcf:citekey order="32">Tomita2006</bcf:citekey>
+    <bcf:citekey order="33">Chartier2015</bcf:citekey>
+    <bcf:citekey order="34">python37</bcf:citekey>
+    <bcf:citekey order="35">Wishart2017</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="none/global" type="entry" sortscheme="none" sortnamekeyscheme="global">
   <bcf:sorting>
