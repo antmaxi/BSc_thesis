@@ -1,3 +1,5 @@
+Here are listed program modules to be installed for work of the protocol
+
 PubChempy
 https://pubchempy.readthedocs.io/en/latest/guide/install.html
 pip install pubchempy
@@ -5,8 +7,6 @@ pip install pubchempy
 
 TM-align
 https://zhanglab.ccmb.med.umich.edu/TM-score/
-sudo apt install tm-align
-or
 conda install -c schrodinger tmalign
 
 
@@ -22,9 +22,7 @@ conda install -c anaconda biopython
 
 OPENBABEL
 https://openbabel.org/docs/dev/Installation/install.html
-
 conda install -c openbabel openbabel
-
 
 IsoMIF
 https://github.com/mtthchrtr/IsoMif
@@ -34,14 +32,17 @@ Get_cleft
 https://github.com/NRGlab/Get_Cleft
 GSL
 https://coral.ise.lehigh.edu/jild13/2016/07/11/hello/
+IsoMif-master, Get_Cleft-master and executable reduce.3.23.130521 
+should be placed to Isomif subdirectory of the project root
 
+Programs for mutations effect predictions and their modeling are so far not included to the protocol
 
 POLYPHEN
 http://genetics.bwh.harvard.edu/pph2/dokuwiki/downloads -- download from here
 http://genetics.bwh.harvard.edu/pph2/dokuwiki/appendix_a -- result file explanation
-rsync -rltv --delete-after --port=33444 \
+rsync -rltv --delete-after --port=33444 
       rsync.wwpdb.org::ftp/data/structures/divided/pdb/ $PPH/wwpdb/divided/pdb/
-
+      
 rsync -rltv --delete-after --port=33444 \
       rsync.wwpdb.org::ftp/data/structures/all/pdb/ $PPH/wwpdb/all/pdb/
 
