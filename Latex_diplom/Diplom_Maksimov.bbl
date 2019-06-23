@@ -320,10 +320,9 @@
       \field{isbn}{1663-9812}
       \field{issn}{16639812}
       \field{journaltitle}{Frontiers in Pharmacology}
+      \field{month}{05}
       \field{title}{{On the integration of in silico drug design methods for drug repurposing}}
       \field{year}{2017}
-      \field{number}{MAY}
-      \range{number}{-1}
       \field{pages}{1\bibrangedash 7}
       \range{pages}{7}
       \field{volume}{8}

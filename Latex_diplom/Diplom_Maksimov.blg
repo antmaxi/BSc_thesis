@@ -1,19 +1,19 @@
 [0] Config.pm:340> INFO - This is Biber 2.4
 [0] Config.pm:343> INFO - Logfile is 'Diplom_Maksimov.blg'
-[49] biber:287> INFO - === Сб июн 22, 2019, 19:18:12
-[206] Biber.pm:348> INFO - Reading 'Diplom_Maksimov.bcf'
-[452] Biber.pm:742> INFO - Found 29 citekeys in bib section 0
-[460] Biber.pm:3151> INFO - Processing section 0
-[494] Biber.pm:3308> INFO - Looking for bibtex format file 'cite/Literature.bib' for section 0
-[812] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
-[1079] bibtex.pm:974> INFO - Found BibTeX data source 'cite/Literature.bib'
-[1118] Utils.pm:147> WARN - ISBN '0022-2623' in entry 'Anighoro2014' is invalid - run biber with '--validate_datamodel' for details.
-[1215] Utils.pm:147> WARN - ISBN '1663-9812' in entry 'March-Vila2017' is invalid - run biber with '--validate_datamodel' for details.
-[1260] Utils.pm:147> WARN - ISBN '20506511 (Electronic)' in entry 'Chartier2017' is invalid - run biber with '--validate_datamodel' for details.
-[1518] Utils.pm:147> WARN - I didn't find a database entry for 'pubchem' (section 0)
-[1717] UCollate.pm:65> INFO - Overriding locale 'ru-RU' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1717] UCollate.pm:65> INFO - Overriding locale 'ru-RU' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1717] Biber.pm:3028> INFO - Sorting list 'none/global' of type 'entry' with scheme 'none' and locale 'ru-RU'
-[1747] bbl.pm:519> INFO - Writing 'Diplom_Maksimov.bbl' with encoding 'UTF-8'
-[1872] bbl.pm:615> INFO - Output to Diplom_Maksimov.bbl
-[1872] Biber.pm:109> INFO - WARNINGS: 4
+[46] biber:287> INFO - === Вс июн 23, 2019, 00:07:50
+[202] Biber.pm:348> INFO - Reading 'Diplom_Maksimov.bcf'
+[436] Biber.pm:742> INFO - Found 29 citekeys in bib section 0
+[445] Biber.pm:3151> INFO - Processing section 0
+[486] Biber.pm:3308> INFO - Looking for bibtex format file 'cite/Literature.bib' for section 0
+[799] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
+[1062] bibtex.pm:974> INFO - Found BibTeX data source 'cite/Literature.bib'
+[1107] Utils.pm:147> WARN - ISBN '0022-2623' in entry 'Anighoro2014' is invalid - run biber with '--validate_datamodel' for details.
+[1203] Utils.pm:147> WARN - ISBN '1663-9812' in entry 'March-Vila2017' is invalid - run biber with '--validate_datamodel' for details.
+[1238] Utils.pm:147> WARN - ISBN '20506511 (Electronic)' in entry 'Chartier2017' is invalid - run biber with '--validate_datamodel' for details.
+[1481] Utils.pm:147> WARN - I didn't find a database entry for 'pubchem' (section 0)
+[1683] UCollate.pm:65> INFO - Overriding locale 'ru-RU' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1683] UCollate.pm:65> INFO - Overriding locale 'ru-RU' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1683] Biber.pm:3028> INFO - Sorting list 'none/global' of type 'entry' with scheme 'none' and locale 'ru-RU'
+[1713] bbl.pm:519> INFO - Writing 'Diplom_Maksimov.bbl' with encoding 'UTF-8'
+[1840] bbl.pm:615> INFO - Output to Diplom_Maksimov.bbl
+[1840] Biber.pm:109> INFO - WARNINGS: 4
