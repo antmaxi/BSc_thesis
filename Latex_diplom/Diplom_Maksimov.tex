@@ -34,7 +34,7 @@
 \usepackage{sectsty}
 \sectionfont{\centering\fontsize{14}{15}\selectfont}
 \subsectionfont{\fontsize{14}{15}\selectfont}
-\subsubsectionfont{\fontsize{13}{15}\selectfont}
+\subsubsectionfont{\fontsize{14}{15}\selectfont}
 
 % Внутри секции картинки
 \usepackage[section]{placeins}
@@ -53,16 +53,6 @@ minbibnames=2, % Число авторов, отображаемое при со
 style=gost-numeric,
 backend=biber]{biblatex}
 \addbibresource{cite/Literature.bib}
-%\bibliography{Literature.bib}
-%
-\if 0 \usepackage{titlesec}
-\titleformat{\section}
-{\normalfont\fontsize{14}{15}\bfseries}{\thesection}{1em}{}
-\titleformat{\subsection}
-{\normalfont\fontsize{14}{15}\bfseries}{\thesubsection}{1em}{}
-\titleformat{\subsubsection}
-{\normalfont\fontsize{14}{15}\bfseries}{\thesubsubsection}{1em}{}
-\fi
 
 \usepackage{xcolor}
 %\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
@@ -87,7 +77,8 @@ backend=biber]{biblatex}
 	stringstyle=\color{codepurple},
 	basicstyle=\footnotesize\ttfamily,
 	breakatwhitespace=false,         
-	breaklines=true,                 
+	breaklines=true,
+	%postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},                 
 	captionpos=b,                    
 	keepspaces=true,                 
 	numbers=left,                    
@@ -95,7 +86,7 @@ backend=biber]{biblatex}
 	showspaces=false,                
 	showstringspaces=false,
 	showtabs=false,                  
-	tabsize=2
+	tabsize=2,
 }
 
 \lstset{style=mystyle}
@@ -136,9 +127,10 @@ backend=biber]{biblatex}
 
 \textbf{ПП}~--- программный пакет.
 
-\color{gray}
-\textbf{GPCR} --- рецепторы, сопряженные с G-белком (англ. G-protein-coupled receptors)
 
+\textbf{GPCR} --- рецепторы, сопряженные с G-белком (англ. G-protein-coupled receptors).
+
+\color{gray}
 \textbf{ТМ} --- трансмембранный участок
 
 \textbf{МГ} --- моделирование по гомологии
@@ -150,7 +142,7 @@ backend=biber]{biblatex}
 \section{Введение}
 Математическое моделирование и вычислительные методы давно стали неотъемлемой частью исследований в биологии и медицине, причем налицо тенденция к росту важности и востребованности таких методов и в фундаментальной науке, и в приложениях. Так, в современной фармакологии высокопроизводительный виртуальный скрининг является важнейшим этапом отсева молекул-кандидатов на статус лекарства перед дорогостоящими клиническими испытаниями. Использование компьютерных расчетов позволяет значительно сократить количество затрачиваемых на поиск лекарства времени и ресурсов.
 
-Одним из методов поиска и отсева кандидатов является сравнение с уже известными лекарствами, имеющими положительные и побочные эффекты. Таким способом можно производить поиск как новых мишеней для уже известных лекарств, так и по известным мишеням находить новые лиганды для них. Кроме поиска лекарства, такие исследования могут помочь в нахождении побочных эффектов и ранее неизвестных последствий одновременного использования нескольких препаратов. Однако, насколько нам известно, сейчас не существует публично доступного программного модуля, позволяющего искать кандидатов в новые лекарственные средства с использованием широкого спектра различных метрик подобия.
+Одним из методов поиска и отсева кандидатов является сравнение с уже известными лекарствами, имеющими положительные и побочные эффекты. Таким способом можно производить поиск как новых мишеней для уже известных лекарств, так и по известным мишеням находить новые лиганды для них. Кроме поиска лекарства, такие исследования могут помочь в нахождении побочных эффектов и ранее неизвестных последствий одновременного использования нескольких препаратов. Однако, насколько нам известно, сейчас не существует публично доступного программного модуля или пакета, позволяющего искать кандидатов в новые лекарственные средства с использованием широкого спектра различных метрик подобия.
 
 \textbf{Целью} данной работы являлось построение такого гибко настраиваемого программного протокола для поиска неспецифичных взаимодействий между лигандами и мишенями. 
 
@@ -159,7 +151,7 @@ backend=biber]{biblatex}
 	\item извлечь из доступных баз данных биологических соединений необходимую информацию о подтвержденных FDA лекарствах, соответствующих лигандах и мишенях, и реализовать это в программном коде;
 	\item создать функции для конвертации данных одной молекулы в требуемые сторонними программами форматы;
 	\item создать функции для сравнения одного элемента входных данных с одной подтвержденной FDA записью;
-	\item реализовать поиск наиболее подходящих в терминах различных метрик подобия для лигандов/мишеней/комплексов.
+	\item реализовать поиск по референсным данным наиболее подходящих в терминах различных метрик подобия для лигандов/мишеней/комплексов.
 \end{enumerate}
 
 \subsection{Обзор литературы}
@@ -311,7 +303,7 @@ TM-score считается более подходящим для оценки 
 
 Работа модуля была протестирована на компьютере с операционной системой Ubuntu 16.04 LTS 64-bit, с процессором Intel® Core™ i9-7940X CPU @ 3.10GHz $\times$ 28 и видеокартой GeForce GTX 1080 Ti/PCIe/SSE2.
 \subsubsection{Извлечение данных}
-Было решено производить извлечение референсных данных из БД Drugbank, так как она является наиболее полной и хорошо аннотированной БД лекарств \sic{cite{}} и содержит не только информацию о лигандах, но и о мишенях вместе со ссылками на другие специфические источники информации. 
+Было решено производить извлечение референсных данных из БД Drugbank, так как она является одной из наиболее полных и хорошо аннотированных БД лекарств \cite{Wishart2017} и содержит информацию не только о лигандах, но и об их мишенях вместе со ссылками на другие специфические источники информации. 
 
 Хотя в приложении к полной БД Drugbank находятся таблицы с частью нужной для работы протокола информации (ссылки на другие БД, химические идентификаторы), было принято решение извлекать информацию напрямую из полной БД, что позволяет: 
 
@@ -321,7 +313,7 @@ TM-score считается более подходящим для оценки 
 
 При извлечении лигандов с информацией о них считалось, что лиганд подтвержден FDA, если среди указанных в БД лекарственных продуктов с его участием есть хотя бы один подтвержденный FDA. Это значит, что эта молекула в некоторых условиях безвредна для человека, так что можно включить ее в предварительный поиск лекарств. 
 
-В будущем поиск такого рода можно усовершенствовать путем приоритетного рассмотрения тех пар лиганд-мишень, которые входят в подтвержденные FDA лекарства. Так же можно будет учитывать 
+В будущем поиск такого рода можно усовершенствовать путем приоритетного рассмотрения тех пар лиганд-мишень, которые входят в подтвержденные FDA лекарства. Так же можно будет учитывать известные побочные эффекты референсных лекарств при построении прогноза перспективности входных данных для дальнейшего изучения.
 
 \subsubsection{Сходство белков по аминокислотной последовательности}
 
@@ -329,19 +321,39 @@ TM-score считается более подходящим для оценки 
 
 Пример использования этой функции приведен в листинге \ref{lst:fasta}
 \color{black}. Была взята АКП GPCR человеческого белка родопсина, одного из важнейших белков у человека и ключевого инструмента оптогенетики. Неудивительно, что наиболее похожей мишенью из БД Drugbank оказался он же сам. Наилучшие найденные белки, как и следовало ожидать, также принадлежат семейству GPRC, но их а/к последовательности достаточно сильно отличаются от данной (падение схожести с 1843 до 318, идентичности с 348 до 156), так что, вероятно, в данном случае сложно говорить о возможности совпадения лигандов родопсина и остальных мишеней из списка. Однако, то, что найдены белки из того же семейства, говорит о том, что работа функции с большой вероятностью корректна.
-\begin{lstlisting}[language=Python, label={lst:fasta}, caption={Определение сходства мишеней по а/к последовательности посредством Biopython, входные данные~--- ID Uniptor человеческого родопсина из семейства GPCR.}]
+\begin{lstlisting}[label={lst:fasta}, caption={Определение сходства мишеней по а/к последовательности посредством Biopython, входные данные~--- ID Uniptor человеческого родопсина из семейства GPCR.}]
 In:
 	get_closest_fastas_from_uniprot('P08100', path_to_data_in_fasta, k=0, align_matrix='blosum62', sim_or_ident=True)
 Out:
 
-		 similarity identity 			name
+	similarity 		identity 					name
 	1392 	 	1843 	348  	lcl|BSEQ0016346|Rhodopsin
-	1931 	 	318 	156 	lcl|BSEQ0010278|Cholecystokinin receptor type A
-	151 	 	295 	147 	lcl|BSEQ0016698|Somatostatin receptor type 5
-	152 	 	292 	154 	lcl|BSEQ0006800|Somatostatin receptor type 2
-	676 	 	270 	156 	lcl|BSEQ0002303|Gastrin/cholecystokinin type B receptor
-	1317 	 	262 	139 	lcl|BSEQ0010362|Melatonin receptor type 1A
+	1931 	 	318 	156 	lcl|BSEQ0010278|Cholecystokinin_receptor_type_A
+	151 	 	295 	147 	lcl|BSEQ0016698|Somatostatin_receptor_type_5
+	152 	 	292 	154 	lcl|BSEQ0006800|Somatostatin_receptor_type_2
+	676 	 	270 	156 	lcl|BSEQ0002303|Gastrin/cholecystokinin_type_B_receptor
+	1317 	 	262 	139 	lcl|BSEQ0010362|Melatonin_receptor_type_1A
 
+	...
+	
+	Name = lcl|BSEQ0010278|Cholecystokinin_receptor_type_A
+	Similarity=318.5, identity=156
+	Matrix blosum62, number of alignments = 1
+	MNGTEGPNFYVPFSNATGVVRSPFEYPQYY-LAEP-----WQFS---
+	
+	MLAAYMFLLIVLGFPINFLTLYVTVQHKKLRTPLNYILLNLAVADLFMVLGGFTSTLYTSLHGYFVFGPTGCNLEGFFATLGGEIAL	
+	WSLVVLAIERYVVVCKPM-SNFFGENHAIMGVAFTWVMALACAAP-PLAGWSRYIP--EGLQCSCGIDYYTLKPEVNNESFVIYMFVVHFTIPMIIIFFCYGQLVFTV----------KEAAAQQQESATT------------QK---------------------------------AEKEVTRMVIIMVIAFLICWVPYASV---
+	-AFYIFTHQGSNFG-PIFMTIPAFFAKSAAIYNPVIYIMMNKQFRNCMLTTICCGKNP--------LGDDEASATVSKT--------ETSQVAPA
+	|....  ...|..||.|.......|..... |..|     ||..   .|....|||.|||   |.|...|....|..||..|..||.|||.||...|......|...|...|.||...|.....|...........||....|||
+	...|||. |.......||....|.||........| |.  .|...|  .............|...|...|.........|.||.|.....||......          |..|.....|.|.            ||                                 |.|.|.||.|..|..|..||.|..|.    |...........| ||..........|..  ||.||..|||.||.....|..|..||        .|..|...|....        ....|.|.
+	MDVVD--SLLVNGSNITPPCELGLENETLFCLDQPRPSKEWQPAVQILLYSLIFLLSVLG---NTLVITVLIRNKRMRTVTNIFLLSLAVSDLMLCLFCMPFNLIPNLLKDFIFGSAVCKTTTYFMGTSVSVSTFNLVAISLERYGAICKP
+	LQSRVWQTKSHALKVIAATWCLSFTIMTPYPI--YSNLVPFTKNNNQTANMCRFLLPNDVMQQSWHTFLLLILFLIPGIVMMVAYGLISLELYQGIKFEASQKKSAKERKPSTTSSGKY
+	EDSDGCYLQKTRPPRKLELRQLSTGSSSRANRIRSNSSAANLMAKKRVIRMLIVIVVLFFLCWMPIFSANAWRAYDTASAERRLSGT
+	PISFILLLSYTSSCV--NPIIYCFMNKRFRLGFMATFPCCPNPGPPGARGEVGEEEEGGTTGASLSRFSYSHMSASVPPQ
+	Score=318.5
+	
+	...
+	
 CPU times: user 10min 41s, sys: 1.26 s, total: 10min 42s
 Wall time: 10min 43s
 \end{lstlisting}
