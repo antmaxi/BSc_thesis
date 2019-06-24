@@ -338,6 +338,61 @@
       \endverb
       \keyw{Chemogenomics,Drug discovery,Drug repurposing,Ligand-based drug design,Machine learning,Molecular modeling,Structure-based drug design,Transcriptomics}
     \endentry
+    \entry{Cereto-Massague2015}{article}{useauthor=false}
+      \name{author}{6}{}{%
+        {{hash=e991737e16c245c19cfdb01d91ad529a}{%
+           family={Cereto-Massagué},
+           family_i={C\bibinithyphendelim M\bibinitperiod},
+           given={Adrià},
+           given_i={A\bibinitperiod}}}%
+        {{hash=ae2b66c6a2e57d548fdc711032feb396}{%
+           family={Ojeda},
+           family_i={O\bibinitperiod},
+           given={María\bibnamedelima José},
+           given_i={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=3f86ce59eb9c909b3bef3aea62b755e9}{%
+           family={Valls},
+           family_i={V\bibinitperiod},
+           given={Cristina},
+           given_i={C\bibinitperiod}}}%
+        {{hash=dee9b636f222f84929a1cee734dec5cb}{%
+           family={Mulero},
+           family_i={M\bibinitperiod},
+           given={Miquel},
+           given_i={M\bibinitperiod}}}%
+        {{hash=524d56df15e04cf998359487c517e40e}{%
+           family={Garcia-Vallvé},
+           family_i={G\bibinithyphendelim V\bibinitperiod},
+           given={Santiago},
+           given_i={S\bibinitperiod}}}%
+        {{hash=f5fee8e2804a181170b73d8973cc514b}{%
+           family={Pujadas},
+           family_i={P\bibinitperiod},
+           given={Gerard},
+           given_i={G\bibinitperiod}}}%
+      }
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Molecular fingerprints have been used for a long time now in drug discovery and virtual screening. Their ease of use (requiring little to no configuration) and the speed at which substructure and similarity searches can be performed with them - paired with a virtual screening performance similar to other more complex methods - is the reason for their popularity. However, there are many types of fingerprints, each representing a different aspect of the molecule, which can greatly affect search performance. This review focuses on commonly used fingerprint algorithms, their usage in virtual screening, and the software packages and online tools that provide these algorithms.}
+      \field{issn}{10959130}
+      \field{journaltitle}{Methods}
+      \field{title}{{Molecular fingerprint similarity search in virtual screening}}
+      \field{year}{2015}
+      \field{number}{C}
+      \range{number}{1}
+      \field{pages}{58\bibrangedash 63}
+      \range{pages}{6}
+      \field{volume}{71}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1016/j.ymeth.2014.08.005
+      \endverb
+      \verb{file}
+      \verb :media/anton/b8150e49-6ff0-467b-ad66-40347e8bb188/anton/BACHELOR/Articles/ligands/2015{\_}Molecular fingerprint similarity search in virtual screening.pdf:pdf
+      \endverb
+      \keyw{Comparison,Data fusion,Fingerprints,Similarity search,Virtual screening}
+    \endentry
     \entry{Ehrt2016}{article}{}
       \name{author}{3}{}{%
         {{hash=b3721c7a2f0ba82b0bb380ee5ba8c6ec}{%
@@ -381,6 +436,106 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1021/acs.jmedchem.6b00078
+      \endverb
+    \endentry
+    \entry{Krone2016}{article}{useauthor=false}
+      \name{author}{8}{}{%
+        {{hash=8700c039e0e65e8a822e2237f476ae47}{%
+           family={Krone},
+           family_i={K\bibinitperiod},
+           given={M.},
+           given_i={M\bibinitperiod}}}%
+        {{hash=a68f4f9ca3834e926d34db262815a5f2}{%
+           family={Kozlikova},
+           family_i={K\bibinitperiod},
+           given={B.},
+           given_i={B\bibinitperiod}}}%
+        {{hash=1d69f570f35991594d24164a7a975fa4}{%
+           family={Lindow},
+           family_i={L\bibinitperiod},
+           given={N.},
+           given_i={N\bibinitperiod}}}%
+        {{hash=6596485e639bb574eef038170a02b9cb}{%
+           family={Baaden},
+           family_i={B\bibinitperiod},
+           given={M.},
+           given_i={M\bibinitperiod}}}%
+        {{hash=b287dff891b60e28b87b3391d67d66ab}{%
+           family={Baum},
+           family_i={B\bibinitperiod},
+           given={D.},
+           given_i={D\bibinitperiod}}}%
+        {{hash=36c51ea46fe4ed2824febe5366a60e88}{%
+           family={Parulek},
+           family_i={P\bibinitperiod},
+           given={J.},
+           given_i={J\bibinitperiod}}}%
+        {{hash=eacf86453b34a7be7b6060aabd01befd}{%
+           family={Hege},
+           family_i={H\bibinitperiod},
+           given={H.-C.},
+           given_i={H\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=52e6fe253f0bfa74011a7b46a9f42414}{%
+           family={Viola},
+           family_i={V\bibinitperiod},
+           given={I.},
+           given_i={I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Graphics Forum}
+      \field{month}{06}
+      \field{title}{Visual Analysis of Biomolecular Cavities: State of the Art}
+      \field{year}{2016}
+      \field{number}{3}
+      \range{number}{1}
+      \field{pages}{527\bibrangedash 551}
+      \range{pages}{25}
+      \field{volume}{35}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1111/cgf.12928
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1111/cgf.12928
+      \endverb
+    \endentry
+    \entry{Aurenhammer1991}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1350bc7128e734e211270a2e1c5faaca}{%
+           family={Aurenhammer},
+           family_i={A\bibinitperiod},
+           given={Franz},
+           given_i={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery ({ACM})}%
+      }
+      \strng{namehash}{1350bc7128e734e211270a2e1c5faaca}
+      \strng{fullhash}{1350bc7128e734e211270a2e1c5faaca}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{ACM} Computing Surveys}
+      \field{month}{09}
+      \field{title}{Voronoi diagrams---a survey of a fundamental geometric data structure}
+      \field{year}{1991}
+      \field{number}{3}
+      \range{number}{1}
+      \field{pages}{345\bibrangedash 405}
+      \range{pages}{61}
+      \field{volume}{23}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1145/116873.116880
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/116873.116880
       \endverb
     \endentry
     \entry{Chartier2017}{article}{useauthor=false}
@@ -640,61 +795,6 @@
       \verb{url}
       \verb https://doi.org/10.1093/bioinformatics/btq066
       \endverb
-    \endentry
-    \entry{Cereto-Massague2015}{article}{useauthor=false}
-      \name{author}{6}{}{%
-        {{hash=e991737e16c245c19cfdb01d91ad529a}{%
-           family={Cereto-Massagué},
-           family_i={C\bibinithyphendelim M\bibinitperiod},
-           given={Adrià},
-           given_i={A\bibinitperiod}}}%
-        {{hash=ae2b66c6a2e57d548fdc711032feb396}{%
-           family={Ojeda},
-           family_i={O\bibinitperiod},
-           given={María\bibnamedelima José},
-           given_i={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=3f86ce59eb9c909b3bef3aea62b755e9}{%
-           family={Valls},
-           family_i={V\bibinitperiod},
-           given={Cristina},
-           given_i={C\bibinitperiod}}}%
-        {{hash=dee9b636f222f84929a1cee734dec5cb}{%
-           family={Mulero},
-           family_i={M\bibinitperiod},
-           given={Miquel},
-           given_i={M\bibinitperiod}}}%
-        {{hash=524d56df15e04cf998359487c517e40e}{%
-           family={Garcia-Vallvé},
-           family_i={G\bibinithyphendelim V\bibinitperiod},
-           given={Santiago},
-           given_i={S\bibinitperiod}}}%
-        {{hash=f5fee8e2804a181170b73d8973cc514b}{%
-           family={Pujadas},
-           family_i={P\bibinitperiod},
-           given={Gerard},
-           given_i={G\bibinitperiod}}}%
-      }
-      \field{sortinit}{0}
-      \field{sortinithash}{990108227b3316c02842d895999a0165}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Molecular fingerprints have been used for a long time now in drug discovery and virtual screening. Their ease of use (requiring little to no configuration) and the speed at which substructure and similarity searches can be performed with them - paired with a virtual screening performance similar to other more complex methods - is the reason for their popularity. However, there are many types of fingerprints, each representing a different aspect of the molecule, which can greatly affect search performance. This review focuses on commonly used fingerprint algorithms, their usage in virtual screening, and the software packages and online tools that provide these algorithms.}
-      \field{issn}{10959130}
-      \field{journaltitle}{Methods}
-      \field{title}{{Molecular fingerprint similarity search in virtual screening}}
-      \field{year}{2015}
-      \field{number}{C}
-      \range{number}{1}
-      \field{pages}{58\bibrangedash 63}
-      \range{pages}{6}
-      \field{volume}{71}
-      \range{volume}{1}
-      \verb{doi}
-      \verb 10.1016/j.ymeth.2014.08.005
-      \endverb
-      \verb{file}
-      \verb :media/anton/b8150e49-6ff0-467b-ad66-40347e8bb188/anton/BACHELOR/Articles/ligands/2015{\_}Molecular fingerprint similarity search in virtual screening.pdf:pdf
-      \endverb
-      \keyw{Comparison,Data fusion,Fingerprints,Similarity search,Virtual screening}
     \endentry
     \entry{rdkit}{online}{}
       \field{sortinit}{0}
@@ -1054,6 +1154,7 @@
     \endentry
   \endsortlist
   \missing{pubchem}
+  \missing{\cite {Laskowski1995}}
 \endrefsection
 \endinput
 
