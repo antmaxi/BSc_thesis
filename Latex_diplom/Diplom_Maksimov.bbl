@@ -609,6 +609,13 @@
       \verb https://www.rcsb.org
       \endverb
     \endentry
+    \entry{pubchem}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://pubchem.ncbi.nlm.nih.gov
+      \endverb
+    \endentry
     \entry{Jaccard1901}{article}{}
       \name{author}{1}{}{%
         {{hash=87a064a14b90f16946db798a8b99a5d0}{%
@@ -630,6 +637,55 @@
       \range{number}{1}
       \field{pages}{547\bibrangedash 579}
       \range{pages}{33}
+    \endentry
+    \entry{ALTSCHUL1990403}{article}{useauthor=false}
+      \name{author}{5}{}{%
+        {{hash=5a34c13712812995253f9c7ea172fa28}{%
+           family={Altschul},
+           family_i={A\bibinitperiod},
+           given={Stephen\bibnamedelima F.},
+           given_i={S\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=1c2560e77e0430d3a44f0f96961c9539}{%
+           family={Gish},
+           family_i={G\bibinitperiod},
+           given={Warren},
+           given_i={W\bibinitperiod}}}%
+        {{hash=c13772644daf4bc5872dadebc400007c}{%
+           family={Miller},
+           family_i={M\bibinitperiod},
+           given={Webb},
+           given_i={W\bibinitperiod}}}%
+        {{hash=f07fd3dea6458cc1691131ae8f47828f}{%
+           family={Myers},
+           family_i={M\bibinitperiod},
+           given={Eugene\bibnamedelima W.},
+           given_i={E\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=1e973f5fb6340fc30346780fcad460e0}{%
+           family={Lipman},
+           family_i={L\bibinitperiod},
+           given={David\bibnamedelima J.},
+           given_i={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A new approach to rapid sequence comparison, basic local alignment search tool (BLAST), directly approximates alignments that optimize a measure of local similarity, the maximal segment pair (MSP) score. Recent mathematical results on the stochastic properties of MSP scores allow an analysis of the performance of this method as well as the statistical significance of alignments it generates. The basic algorithm is simple and robust; it can be implemented in a number of ways and applied in a variety of contexts including straight-forward DNA and protein sequence database searches, motif searches, gene identification searches, and in the analysis of multiple regions of similarity in long DNA sequences. In addition to its flexibility and tractability to mathematical analysis, BLAST is an order of magnitude faster than existing sequence comparison tools of comparable sensitivity.}
+      \field{issn}{0022-2836}
+      \field{journaltitle}{Journal of Molecular Biology}
+      \field{title}{Basic local alignment search tool}
+      \field{year}{1990}
+      \field{number}{3}
+      \range{number}{1}
+      \field{pages}{403\bibrangedash 410}
+      \range{pages}{8}
+      \field{volume}{215}
+      \range{volume}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/S0022-2836(05)80360-2
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S0022283605803602
+      \endverb
     \endentry
     \entry{biopython}{online}{}
       \field{sortinit}{0}
@@ -794,6 +850,50 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1093/bioinformatics/btq066
+      \endverb
+    \endentry
+    \entry{Weininger1989}{article}{}
+      \name{author}{3}{}{%
+        {{hash=8396687b96e64d23dac029daee2916d2}{%
+           family={Weininger},
+           family_i={W\bibinitperiod},
+           given={David},
+           given_i={D\bibinitperiod}}}%
+        {{hash=1ddc2ebc4563dcd3ae38569fc6911b47}{%
+           family={Weininger},
+           family_i={W\bibinitperiod},
+           given={Arthur},
+           given_i={A\bibinitperiod}}}%
+        {{hash=7ba166a0b582719537d186709941e326}{%
+           family={Weininger},
+           family_i={W\bibinitperiod},
+           given={Joseph\bibnamedelima L.},
+           given_i={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Chemical Society ({ACS})}%
+      }
+      \strng{namehash}{aa702504268aed3560d1df0279e5a079}
+      \strng{fullhash}{aa702504268aed3560d1df0279e5a079}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Chemical Information and Modeling}
+      \field{month}{05}
+      \field{title}{{SMILES}. 2. Algorithm for generation of unique {SMILES} notation}
+      \field{year}{1989}
+      \field{number}{2}
+      \range{number}{1}
+      \field{pages}{97\bibrangedash 101}
+      \range{pages}{5}
+      \field{volume}{29}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1021/ci00062a008
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1021/ci00062a008
       \endverb
     \endentry
     \entry{rdkit}{online}{}
@@ -1153,8 +1253,6 @@
       \endverb
     \endentry
   \endsortlist
-  \missing{pubchem}
-  \missing{\cite {Laskowski1995}}
 \endrefsection
 \endinput
 
