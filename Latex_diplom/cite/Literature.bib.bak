@@ -906,4 +906,31 @@ This chapter elaborates protein structure prediction using Rosetta. Double-blind
   url       = {https://doi.org/10.1145/116873.116880},
 }
 
+@Article{Weininger1989,
+  author    = {David Weininger and Arthur Weininger and Joseph L. Weininger},
+  title     = {{SMILES}. 2. Algorithm for generation of unique {SMILES} notation},
+  journal   = {Journal of Chemical Information and Modeling},
+  year      = {1989},
+  volume    = {29},
+  number    = {2},
+  pages     = {97--101},
+  month     = may,
+  doi       = {10.1021/ci00062a008},
+  publisher = {American Chemical Society ({ACS})},
+  url       = {https://doi.org/10.1021/ci00062a008},
+}
+
+@Article{Zhang2004,
+  author    = {Yang Zhang and Jeffrey Skolnick},
+  title     = {Scoring function for automated assessment of protein structure template quality},
+  journal   = {Proteins: Structure, Function, and Bioinformatics},
+  year      = {2004},
+  volume    = {57},
+  number    = {4},
+  pages     = {702--710},
+  doi       = {10.1002/prot.20264},
+  publisher = {Wiley},
+  url       = {https://doi.org/10.1002/prot.20264},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

@@ -3161,6 +3161,7 @@
     <bcf:citekey order="15">Krone2016</bcf:citekey>
     <bcf:citekey order="16">Aurenhammer1991</bcf:citekey>
     <bcf:citekey order="17">Krone2016</bcf:citekey>
+    <bcf:citekey order="18">Santos2016</bcf:citekey>
     <bcf:citekey order="18">Chartier2017</bcf:citekey>
     <bcf:citekey order="19">drugbank</bcf:citekey>
     <bcf:citekey order="20">uniprot</bcf:citekey>
@@ -3172,6 +3173,7 @@
     <bcf:citekey order="26">TM</bcf:citekey>
     <bcf:citekey order="26">TMalign</bcf:citekey>
     <bcf:citekey order="27">Lathrop1994</bcf:citekey>
+    <bcf:citekey order="28">Zhang2004</bcf:citekey>
     <bcf:citekey order="28">Levitt1998</bcf:citekey>
     <bcf:citekey order="29">TMalign</bcf:citekey>
     <bcf:citekey order="29">Xu2010</bcf:citekey>

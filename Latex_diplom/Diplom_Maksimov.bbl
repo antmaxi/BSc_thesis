@@ -538,6 +538,87 @@
       \verb https://doi.org/10.1145/116873.116880
       \endverb
     \endentry
+    \entry{Santos2016}{article}{useauthor=false}
+      \name{author}{11}{}{%
+        {{hash=5a34c22daf2cec5307b183940a765c62}{%
+           family={Santos},
+           family_i={S\bibinitperiod},
+           given={Rita},
+           given_i={R\bibinitperiod}}}%
+        {{hash=2ee139eb005d412853a432fab296b579}{%
+           family={Ursu},
+           family_i={U\bibinitperiod},
+           given={Oleg},
+           given_i={O\bibinitperiod}}}%
+        {{hash=ef090f0c6ff6138278103ca580237c79}{%
+           family={Gaulton},
+           family_i={G\bibinitperiod},
+           given={Anna},
+           given_i={A\bibinitperiod}}}%
+        {{hash=ac095c3ad95f114135156e92ebcedad2}{%
+           family={Bento},
+           family_i={B\bibinitperiod},
+           given={A.\bibnamedelimi Patrı́cia},
+           given_i={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=2848ff57424a1ed40844f5fb2063e964}{%
+           family={Donadi},
+           family_i={D\bibinitperiod},
+           given={Ramesh\bibnamedelima S.},
+           given_i={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=cd3c1d6e493accc218af9dfd2c71ff28}{%
+           family={Bologa},
+           family_i={B\bibinitperiod},
+           given={Cristian\bibnamedelima G.},
+           given_i={C\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=55e8e04078dd20ba3baddef00fe88241}{%
+           family={Karlsson},
+           family_i={K\bibinitperiod},
+           given={Anneli},
+           given_i={A\bibinitperiod}}}%
+        {{hash=6c2de189b3311c216fbbd5bfb9f79020}{%
+           family={Al-Lazikani},
+           family_i={A\bibinithyphendelim L\bibinitperiod},
+           given={Bissan},
+           given_i={B\bibinitperiod}}}%
+        {{hash=26c46675e41f83087572952ccbdfe62c}{%
+           family={Hersey},
+           family_i={H\bibinitperiod},
+           given={Anne},
+           given_i={A\bibinitperiod}}}%
+        {{hash=afceb9b7f142352c1948936b858af89e}{%
+           family={Oprea},
+           family_i={O\bibinitperiod},
+           given={Tudor\bibnamedelima I.},
+           given_i={T\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=e4e933dff0b707e6aa02a1448b3f48af}{%
+           family={Overington},
+           family_i={O\bibinitperiod},
+           given={John\bibnamedelima P.},
+           given_i={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Nature}%
+      }
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Reviews Drug Discovery}
+      \field{month}{12}
+      \field{title}{A comprehensive map of molecular drug targets}
+      \field{year}{2016}
+      \field{number}{1}
+      \range{number}{1}
+      \field{pages}{19\bibrangedash 34}
+      \range{pages}{16}
+      \field{volume}{16}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1038/nrd.2016.230
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/nrd.2016.230
+      \endverb
+    \endentry
     \entry{Chartier2017}{article}{useauthor=false}
       \name{author}{4}{}{%
         {{hash=4ca62937d0e37842f3f5f24d3c81f502}{%
@@ -772,6 +853,44 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1093/protein/7.9.1059
+      \endverb
+    \endentry
+    \entry{Zhang2004}{article}{}
+      \name{author}{2}{}{%
+        {{hash=e760d38078aff4a5b24c867aa5178c26}{%
+           family={Zhang},
+           family_i={Z\bibinitperiod},
+           given={Yang},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=582699a6542a10636b5b44c9b0ae1a58}{%
+           family={Skolnick},
+           family_i={S\bibinitperiod},
+           given={Jeffrey},
+           given_i={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{96802fdc869c283d84dc201fb545fb9b}
+      \strng{fullhash}{96802fdc869c283d84dc201fb545fb9b}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proteins: Structure, Function, and Bioinformatics}
+      \field{title}{Scoring function for automated assessment of protein structure template quality}
+      \field{year}{2004}
+      \field{number}{4}
+      \range{number}{1}
+      \field{pages}{702\bibrangedash 710}
+      \range{pages}{9}
+      \field{volume}{57}
+      \range{volume}{1}
+      \verb{doi}
+      \verb 10.1002/prot.20264
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1002/prot.20264
       \endverb
     \endentry
     \entry{Levitt1998}{article}{}
