@@ -195,7 +195,7 @@
 \begin{frame}{Цель проекта}
 	\linespread{1.35}
 	\centering
-    Целью работы являлось построение гибкого програмнного протокола, способного определять степени подобия лигандов/мишеней/комплексов с референсными данными, основанными на подтвержденных FDA лекарствах и протеомах.
+    Целью работы являлось построение гибкого программного протокола, способного определять степени подобия лигандов/мишеней/комплексов с референсными данными, основанными на подтвержденных FDA лекарствах и протеомах.
 	\small
 \end{frame}
 
@@ -240,7 +240,7 @@
 	\begin{itemize}
 	\item По аминокислотным последовательностям мишеней --- с помощью выравнивания алгоритмом BLAST.
 	\item По структурам мишеней --- выравнивание динамическим программированием с последующим вычислением нормированного отклонения структур.
-	\item По структурам лигандов --- используя молекулярные отпечатки топологического (по SDF)и текстового (по SMILES).
+	\item По структурам лигандов --- используя молекулярные отпечатки топологического (по SDF) и текстового (по SMILES).
 	\item По структурам комплексов --- используя графовый поиск на размеченных по физико-химическим свойствам полостях (IsoMIF) и по сравнению геометрий топологий структур (TM-align).
 	\end{itemize}
 \end{frame}
@@ -259,10 +259,9 @@
 \end{figure}
 \end{frame}
 
-\section{Результаты}
- \begin{frame}{Результаты}
- \end{frame}{Результаты}
- \small
+
+{\textbf{Результаты}}
+ \small$\:$\\
  	Сравнение аминокислотных последовательностей мишеней.
      \begin{lstlisting}[label={lst:fasta}, basicstyle=\tiny]
      In:
@@ -289,11 +288,64 @@
      CPU times: user 10min 41s, sys: 1.26 s, total: 10min 42s
      Wall time: 10min 43s
      \end{lstlisting}
-%\end{frame}
+
+{\textbf{Результаты}}
+\small$\:$\\
+Сравнение молекулярных отпечатков лигандов.
+
+По SMILES\\
+
+\begin{lstlisting}[basicstyle=\tiny, language=Python, label={lst:sdf-fing},]
+In: 
+get_closest_ligands_from_3d_structure(path_to_structure, path_to_sdf_approved, root,
+fptype='maccs', number_to_print=5)
+Out:
+name  
+481                          Losartan  
+132                        Olmesartan  
+923                        Fomepizole  
+1110                     Tromethamine  
+947                       Gemfibrozil  
+
+smiles  													similarity  \
+481   CCCCC1=NC(Cl)=C(CO)N1CC1=CC=C(C=C1)C1=CC=CC=C1...    1.000000   
+132   CCCC1=NC(=C(N1CC1=CC=C(C=C1)C1=C(C=CC=C1)C1=NN...    0.677469   
+923                                          CC1=CNN=C1    0.531250   
+1110                                       NC(CO)(CO)CO    0.531250   
+947                  CC1=CC(OCCCC(C)(C)C(O)=O)=C(C)C=C1    0.522267 
+
+
+
+
+
+
+
+CPU times: user 1.87 s, sys: 7.68 ms, total: 1.88 s
+Wall time: 1.88 s
+
+\end{lstlisting}
+
+По структурному файлу
+\begin{lstlisting}[basicstyle=\tiny, language=Python, label={lst:smiles-fing},]
+In:
+smiles = get_smiles_from_name_from_pubchem(name_lig, root)
+df = get_closest_smiles_names(smiles, root, 5)
+Out:
+Name  					Tanimoto coeff			 Drugbank ID 		Fingerprint type
+0    Losartan        1.000000     DB00678            maccs
+1  Olmesartan        0.735294     DB00275            maccs
+2   Valsartan        0.690141     DB00177            maccs
+3  Irbesartan        0.681159     DB01029            maccs
+4  Crizotinib        0.657143     DB08865            maccs
+CPU times: user 2.66 s, sys: 7.99 ms, total: 2.67 s
+Wall time: 2.66 s
+\end{lstlisting}
 
 \section{Заключение}
 \begin{frame}{Заключение}
+	Построен гибкий протокол, использующий различные методы вычисления сходства лигандов/мишеней/комплексов, и его работа проверена.
 	
+	В будущем возможно добавлять новые способы, реализовать параллельные версии программ и учитывать известные побочные эффекты лекарств. Предлагается также использовать методы машинного обучения на коэффициентах сходства, что позволит искать неспецифичные взаимодействия более эффективно.
 \end{frame}
 
 \end{document}
