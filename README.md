@@ -1,7 +1,7 @@
 # BSc_thesis
 A screening protocol to find possible off-targets and search for polypharmacology using different similarity measures and comparison to approved by FDA drugs and correspendent targets or just some proteomes.
 
-See *Installation* for the list of requirements.
+See *Installation* for the list of requirements. Report and presentation are in the folder *Latex_diplom*.
 
 # Files description
 
@@ -15,13 +15,13 @@ See *Installation* for the list of requirements.
         
 **Auxiliaray.py** - Some auxillary functions (download files and pdbs, load processed from Drugbank data) 
 and functions for jumping between ids:
-*Uniprot => a/a sequence
-*Uniprot => PDBs
-*SMILES => PDBs
-*PubCHEM => SMILES
-*Name of ligand => Uniprots of targets
-*Name of ligand => SMILES
-*Also function to convert different structural types (pdb, sdf, mol2) between themselves
+1. Uniprot => a/a sequence
+2. Uniprot => PDBs
+3. SMILES => PDBs
+4. PubCHEM => SMILES
+5. Name of ligand => Uniprots of targets
+6. Name of ligand => SMILES
+7. Also function to convert different structural types (pdb, sdf, mol2) between themselves
 
 **Drugbank.py** - Functions to get needed info from Drugbank, save it. Possible to load info and update the database
 
